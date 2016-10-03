@@ -1,0 +1,14 @@
+.logo{
+	display: block;
+	height: 85px;
+	background: transparent url('../images/block-square.png') left top no-repeat;
+	background-size: contain;
+	padding: 23px 20px 22px;
+	width: 100%;
+	max-width: 290px;
+	margin-bottom: 15px;
+	img{
+		width: 100%;
+		height: auto;
+	}
+}

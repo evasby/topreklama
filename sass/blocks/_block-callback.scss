@@ -1,0 +1,113 @@
+.block-callback{
+	background: transparent url('../images/block-callback-bac.png') left top no-repeat;
+	background-size: 100% 100%;
+	border: 1px solid #bbb;
+	overflow: hidden;
+	padding: 22px 0 21px;
+	max-width: 572px;
+	margin: 0 auto;
+	text-align: center;
+	position: relative;
+	box-shadow: 3px 3px 26px 0px rgba(45,45,45,0.23);
+	margin-bottom: 30px;
+	@include m7{
+		margin-bottom: 58px;
+	}
+	&_title{
+		text-align: center;
+		font-family: $fontBold;
+		color: #ab63c9;
+		font-size: 24px;
+		text-transform: uppercase;
+		margin-bottom: 6px;
+		span{
+			position: relative;
+			display: inline-block;
+			height: 17px;
+			padding: 0 12px;
+			&:before{
+				content: '';
+				position: absolute;
+				left: -800px;
+				top: 4px;
+				display: inline-block;
+				height: 100%;
+				width: 800px;
+				background-color: #ab63c9;
+			}
+			&:after{
+				content: '';
+				position: absolute;
+				right: -800px;
+				top: 4px;
+				display: inline-block;
+				height: 100%;
+				width: 800px;
+				background-color: #ab63c9;
+			}
+		}
+	}
+	&_title2{
+		font-family: $fontBold;
+		font-size: 24px;
+		text-align: center;
+		margin-bottom: 20px;
+	}
+	&_descr{
+		border: 1px solid #2d2d2d;
+		margin: 0 34px;
+		font-size: 14px;
+		color: #000;
+		text-align: center;
+		padding: 20px 30px 50px;
+		position: relative;
+		&:before{
+			content: '';
+			position: absolute;
+			width: 102px;
+			height: 3px;
+			background-color: #ab63c9;
+			bottom: 36px;
+			left: 50%;
+			margin-left: -51px;
+		}
+	}
+	&_link{
+		//max-width: 320px;
+		display: inline-block;
+		padding: 0 10px;
+		margin: 0 auto;
+		background: #e9e9e9;
+		background: linear-gradient(to right, #e9e9e9 0%, #eaeaea 100%);
+		position: relative;
+		top: -26px;
+		text-align: center;
+		a{
+			text-decoration: none;
+			display: inline-block;
+			background: #262626;
+			background: linear-gradient(to bottom, #262626 0%, #000000 100%);
+			box-shadow: inset 0px 1px 1px 0px rgba(255,255,255,1), 0px 2px 2px 0px rgba(11,11,11,0.1);
+			border: 1px solid #0d1117;
+			@include link(#fff, #fff);
+			font-family: $fontBold;
+			font-size: 14px;
+			text-transform: uppercase;
+			padding: 18px 37px;
+			border-radius: 5px;
+			&:hover{
+				background: linear-gradient(to bottom, #000000 0%, #262626 100%);
+			}
+		}
+	}
+	&_arrow{
+		position: absolute;
+		bottom: 17px;
+		left: 50%;
+		margin-left: -10px;
+		display: inline-block;
+		width: 20px;
+		height: 17px;
+		background: transparent url('../images/arrow-callback.png') left top no-repeat;
+	}
+}

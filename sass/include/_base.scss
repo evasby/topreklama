@@ -1,0 +1,85 @@
+*{
+  box-sizing: border-box;
+}
+body{
+  font-family: $fontRegular;
+  color: $fontColor;
+  //font-size: $fsl;
+  //color: $fc;
+  //min-width: $minWidth;
+  //position: relative;
+  //-webkit-font-smoothing: antialised;
+}
+/*.inner{
+  max-width: $maxWidth;
+  padding: $innerPadings;
+  margin: 0 auto;
+  @include clearfix;
+  //background-color: #ccc;
+  @include m480{
+    padding: $innerPadings2;
+  }
+}*/
+a{
+  @include link(#ab63c9, #ab63c9);
+}
+b, strong{
+  //font-family: $bold;
+}
+em{
+  //font-style: $italic;
+}
+textarea{
+  font-family: $fontRegular;
+  resize: none;
+  box-shadow: none;
+  border-radius: 0px;
+}
+input{
+  box-shadow: none;
+  border-radius: 0px;
+}
+button, input[type="reset"], input[type="button"], input[type="submit"] {
+  box-shadow: none;
+}
+a, input, textarea, select, button, div{
+  &:focus{
+    outline: none;
+  }
+}
+pre{
+  word-wrap: break-word;
+}
+/*::-webkit-input-placeholder {
+  font-family: $italic;
+  color: #434242;
+  font-size: 18px;
+}
+:-moz-placeholder {
+  font-family: $italic;
+  color: #434242;
+  font-size: 18px;
+}
+::-moz-placeholder {
+  font-family: $italic;
+  color: #434242;
+  font-size: 18px;
+}
+:-ms-input-placeholder {
+  font-family: $italic;
+  color: #434242;
+  font-size: 18px;
+}
+::-ms-input-placeholder {
+  font-family: $italic;
+  color: #434242;
+  font-size: 18px;
+}
+:placeholder-shown {
+  font-family: $italic;
+  color: #434242;
+  font-size: 18px;
+}*/
+.hide{
+  display: none;
+}

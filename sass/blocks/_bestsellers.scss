@@ -1,0 +1,7 @@
+.bestsellers{
+	background: transparent url('../images/bestsellers-bac.jpg') left top no-repeat;
+	background-size: cover;
+	@include m7{
+		background-size: 100% 100%;
+	}
+}

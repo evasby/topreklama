@@ -1,0 +1,24 @@
+.button-callback{
+	display: block;
+	background: #a045c7;
+	background: linear-gradient(to bottom, #a045c7 0%, #8f25bd 100%);
+	box-shadow: inset 0px 1px 1px 0px rgba(255,255,255,1), 2px 2px 2px 0px rgba(11,11,11,0.38);
+	max-width: 268px;
+	font-family: $fontBold;
+	@include link(#ffffff, #ffffff);
+	font-size: 14px;
+	text-transform: uppercase;
+	text-decoration: none;
+	text-align: center;
+	height: 36px;
+	padding: 12px 0 0;
+	border-radius: 4px;
+	&:hover{
+		background: linear-gradient(to bottom, #8f25bd 0%, #a045c7 100%);
+	}
+	@include m7{
+		margin: 0 2px 13px;
+		float: right;
+		width: 100%;
+	}
+}

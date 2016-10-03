@@ -1,0 +1,6 @@
+.block-advantages{
+	display: none;
+	@include m7{
+		display: block;
+	}
+}

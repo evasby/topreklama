@@ -1,0 +1,6 @@
+.menu-bottom{
+	display: none;
+	@include m7{
+		display: block;
+	}
+}

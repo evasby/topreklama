@@ -1,0 +1,29 @@
+.block-square{
+	//max-height: 85px;
+	background: transparent url('../images/block-square.png') left top no-repeat;
+	background-size: contain;
+	margin-bottom: 15px;
+	//font-family: $fontRegular;
+	font-size: 10px;
+	line-height: 14px;
+	text-transform: uppercase;
+	padding: 20px 0 23px 20px;
+	width: 100%;
+	max-width: 290px;
+	&__address{
+		color: #000;
+	}
+	&__callback{
+		//background: transparent url('../images/block-square-rotated.png') right top no-repeat;
+		font-family: $fontLight;
+	}
+	p{
+		max-width: 140px;
+	}
+	a{
+		font-family: $fontBold;
+	}
+	@include m7{
+		margin-left: 39px;
+	}
+}
