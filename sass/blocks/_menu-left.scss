@@ -2,5 +2,95 @@
 	display: none;
 	@include m7{
 		display: block;
+		margin-bottom: 25px;
+		&_title{
+			background-color: #ab63c9;
+			font-family: $fontBold;
+			text-transform: uppercase;
+			font-size: 18px;
+			text-align: left;
+			margin: 0 0 18px;
+			padding: 0 0 0 20px;
+			span{
+				display: inline-block;
+				padding: 0 10px;
+				background-color: #fff;
+				color: #000;
+			}
+		}
+		&_list{
+			&__l2{
+				border-bottom: 2px solid #fff;
+			}
+		}
+		&_item{
+			position: relative;
+			&__active{
+				&:before{
+					content: '';
+					position: absolute;
+					right: 20px;
+					top: 16px;
+					width: 15px;
+					height: 15px;
+					background: transparent url('../images/menu-left-icons-arrow.png') left top no-repeat;
+					transform: rotate(90deg);
+				}
+			}
+			&__parent{
+				&:before{
+					content: '';
+					position: absolute;
+					right: 20px;
+					top: 16px;
+					width: 15px;
+					height: 15px;
+					background: transparent url('../images/menu-left-icons-arrow.png') left top no-repeat;
+				}
+			}
+		}
+		&_link{
+			font-family: $fontBold;
+			font-size: 14px;
+			text-transform: uppercase;
+			@include link(#fff, #fff);
+			text-decoration: none;
+			display: block;
+			background-color: #ab63c9;
+			border-bottom: 3px solid #fff;
+			padding: 12px 40px 12px 15px;
+			img{
+				vertical-align: middle;
+				margin-right: 10px;
+				position: relative;
+				left: 0;
+				transition: left, 0.2s;
+			}
+			&:hover{
+				img{
+					left: -3px;
+				}
+			}
+			&__l2{
+				display: block;
+				background-color: #ddcbe4;
+				font-family: $fontRegular;
+				font-size: 18px;
+				@include link(#000, #fff);
+				text-decoration: none;
+				border-bottom: 1px solid #fff;
+				padding: 9px 0 9px 55px;
+				position: relative;
+				&:hover{
+					background-color: #2f2f2f;
+				}
+				&:before{
+					content: '-';
+					position: absolute;
+					left: 47px;
+					top: 9px;
+				}
+			}
+		}
 	}
 }

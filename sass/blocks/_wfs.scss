@@ -1,0 +1,19 @@
+.wfs{
+	text-align: left;
+	display: inline-block;
+	height: 37px;
+	background: transparent url('../images/wfs.png') left top no-repeat;
+	padding: 50px 0 0 0;
+	font-size: 12px;
+	font-family: $fontRegular;
+	@include link(#888888, #888888);
+	text-decoration: none;
+	width: 268px;
+	margin: 0 auto;
+	@include m7{
+		width: auto;
+		margin: 0;
+		font-size: 18px;
+		padding: 9px 0 0 178px;
+	}
+}

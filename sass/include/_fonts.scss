@@ -9,6 +9,26 @@
 
 }
 @font-face {
+    font-family: 'fontmyriadbold';
+    src: url('../fonts/MyriadProBold.eot');
+    src: url('../fonts/MyriadProBold.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/MyriadProBold.woff') format('woff'),
+         url('../fonts/MyriadProBold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'fontmyriadregular';
+    src: url('../fonts/MyriadProRegular.eot');
+    src: url('../fonts/MyriadProRegular.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/MyriadProRegular.woff') format('woff'),
+         url('../fonts/MyriadProRegular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
     font-family: 'fontbold';
     src: url('../fonts/OpenSansBold.eot');
     src: url('../fonts/OpenSansBold.eot?#iefix') format('embedded-opentype'),

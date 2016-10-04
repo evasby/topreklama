@@ -1,7 +1,7 @@
 .inner{
 	max-width: $maxWidth;
-	min-width: $minWidth;
 	padding: $innerPadings;
 	margin: 0 auto;
 	@include clearfix;
+	position: relative;
 }

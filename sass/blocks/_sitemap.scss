@@ -1,0 +1,24 @@
+.sitemap{
+	font-family: $fontRegular;
+	font-size: 11px;
+	@include link(#424242, #424242);
+	display: inline-block;
+	position: relative;
+	padding: 0 0 0 22px;
+	margin: 15px 0 0 -180px;
+	&:before{
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 15px;
+		height: 15px;
+		background: transparent url('../images/sitemap.png') left top no-repeat;
+	}
+	@include m7{
+		margin: 0;
+		position: absolute;
+		right: 15px;
+		top: 30px;
+	}
+}

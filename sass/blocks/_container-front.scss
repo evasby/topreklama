@@ -1,0 +1,20 @@
+.container-front{
+	overflow: hidden;
+	@include m7{
+		@include clearfix;
+		padding: 36px 0 50px;
+		&_left{
+			float: left;
+			width: 23.08%;
+		}
+		&_center{
+			float: left;
+			width: 53.84%;
+			padding: 0 30px;
+		}
+		&_right{
+			float: left;
+			width: 23.08%;
+		}
+	}
+}

@@ -1,0 +1,39 @@
+.block-info-footer{
+	max-width: 227px;
+	margin: 0 0 6px;
+	@include m7{
+		margin: -13px 2px 6px 0;
+		float: right;
+		width: 100%;
+	}
+	&_item{
+		font-family: $fontLight;
+		font-size: 20px;
+		color: #000;
+		position: relative;
+		padding: 0 0 0 40px;
+		margin-bottom: 8px;
+		&:before{
+			content: '';
+			position: absolute;
+			left: 3px;
+			top: 3px;
+			width: 23px;
+			height: 19px;
+			background: transparent url('../images/hf-icons.png') -46px -2px no-repeat;
+		}
+		&__phone{
+			font-family: $fontBold;
+			font-size: 22px;
+			padding: 0 0 0 35px;
+			margin-bottom: 16px;
+			&:before{
+				background-position: -69px -3px;
+				width: 17px;
+				height: 17px;
+				top: 5px;
+				left: 6px;
+			}
+		}
+	}
+}

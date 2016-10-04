@@ -1,3 +1,36 @@
 .footer{
-	
+	padding: 10px 0;
+	overflow: hidden;
+	@include m7{
+		@include clearfix;
+		padding: 31px 0 1px;
+	}
+	&_item{
+		max-width: 268px;
+		margin: 0 auto;
+		@include m7{
+			margin: 0;
+			max-width: none;
+			width: 25%;
+			float: left;
+			&:nth-child(1){
+				width: 30%;
+			}
+			&:nth-child(2){
+				width: 20%;
+			}
+			&:nth-child(3){
+				width: 20%;
+			}
+			&:nth-child(4){
+				width: 30%;
+			}
+		}
+	}
+	&_bottom{
+		text-align: center;
+		position: relative;
+		background-color: #ececec;
+		padding: 18px 0 24px;
+	}
 }

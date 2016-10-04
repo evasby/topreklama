@@ -4,14 +4,99 @@
 		background: transparent url('../images/clients-bac.jpg') left top no-repeat;
 		background-size: 100% 100%;
 		display: block;
-		//background-color: #582671;
+		border-top: 1px solid #fff;
+		padding: 37px 0 53px;
+		&_title{
+			text-align: center;
+			font-family: $fontRegular;
+			color: #ffffff;
+			font-size: 36px;
+			margin-bottom: 22px;
+			overflow: hidden;
+			span{
+				position: relative;
+				display: inline-block;
+				height: 19px;
+				padding: 0 22px;
+				&:before{
+					content: '';
+					position: absolute;
+					left: -800px;
+					top: 11px;
+					display: inline-block;
+					height: 100%;
+					width: 800px;
+					background-color: #e9e9e9;
+					box-shadow: 2px 2px 2px 0px rgba(11,11,11,0.38);
+				}
+				&:after{
+					content: '';
+					position: absolute;
+					right: -800px;
+					top: 11px;
+					display: inline-block;
+					height: 100%;
+					width: 800px;
+					background-color: #e9e9e9;
+					box-shadow: 2px 2px 2px 0px rgba(11,11,11,0.38);
+				}
+			}
+		}
+		&_descr{
+			font-family: $fontBold;
+			font-size: 18px;
+			color: #fff;
+			width: 515px;
+			margin: 0 auto;
+			text-align: center;
+			line-height: 24px;
+			margin-bottom: 47px;
+		}
 		&_item{
 			width: 131px;
 			height: 121px;
-			//background: #e9e9e9;
-			//margin-bottom: 10px;
-			//background: linear-gradient(135deg, #e9e9e9 0%, #e9e9e9 50%, #ffffff 50%, #ffffff 100%);
+			float: left;
+			width: 11.19%;
+			margin: 0 0.74%;
+			cursor: pointer;
+			position: relative;
+			perspective: 600px;
+			&:first-child{
+				margin-left: 0;
+			}
+			&:last-child{
+				margin-right: 0;
+			}			
+		}
+		&_card{
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			transition: transform 0.5s;
+			transform-style: preserve-3d;
+			&.flip{
+				transform: rotateY( 180deg );
+			}
+		}
+		figure{
+			width: 100%;
+	    height: 100%;
+	    position: absolute;
+	    display: block;
+	    backface-visibility: hidden;
+		}
+		&_back{
+  		//background: url('../images/card-back.png');
+  		background: #e9e9e9 url('../images/clients-bac.png') left top no-repeat;
+		}
+		&_front{
+			//background: url('../images/card-front.png');
 			background: #e9e9e9 url('../images/clients-bac.png') left top no-repeat;
+			transform: rotateY( 180deg );
+			text-align: center;
+			padding: 25px 5px 0;
 		}
 	}
 }
