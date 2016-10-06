@@ -2,5 +2,65 @@
 	display: none;
 	@include m7{
 		display: block;
+		position: relative;
+		margin-bottom: 26px;
+		&_inner{
+			position: relative;
+			max-width: $maxWidth;
+			//padding: $innerPadings;
+			margin: 0 auto;
+		}
+		&_title{
+			text-align: center;
+			font-family: $fontRegular;
+			color: #000000;
+			font-size: 36px;
+			margin-bottom: 34px;
+			span{
+				position: relative;
+				display: inline-block;
+				height: 19px;
+				padding: 0 17px;
+				&:before{
+					content: '';
+					position: absolute;
+					left: -800px;
+					top: 5px;
+					display: inline-block;
+					height: 100%;
+					width: 800px;
+					background-color: #ab63c9;
+					@include m7{
+						top: 11px;
+					}
+				}
+				&:after{
+					content: '';
+					position: absolute;
+					right: -800px;
+					top: 5px;
+					display: inline-block;
+					height: 100%;
+					width: 800px;
+					background-color: #ab63c9;
+					@include m7{
+						top: 11px;
+					}
+				}
+			}
+		}
+		&_girl{
+			position: absolute;
+			//top: -410px;
+			bottom: 0;
+			left: -81px;
+			img{
+				display: block;
+			}
+		}
+		&_canvas{
+			height: 340px;
+			background-color: #ccc;
+		}
 	}
 }

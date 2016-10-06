@@ -3,7 +3,7 @@
 	overflow: hidden;
 	@include m7{
 		@include clearfix;
-		padding: 31px 0 1px;
+		padding: 0 0 1px;
 	}
 	&_item{
 		max-width: 268px;

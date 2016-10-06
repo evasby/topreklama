@@ -1,0 +1,79 @@
+.map-info{
+	display: none;
+	@include m7{
+		display: block;
+		border: 1px solid #dac6e1;
+		position: absolute;
+		left: 326px;
+		bottom: 79px;
+		&_link{
+			img{
+				width: 100%;
+				height: auto;
+				display: block;
+			}
+		}
+		&_title{
+			text-align: center;
+			font-family: $fontRegular;
+			color: #fff;
+			font-size: 21px;
+			overflow: hidden;
+			text-transform: uppercase;
+			border-top: 13px solid #8700bf;
+			padding: 9px 0;
+			background-color: #2c2c2c;
+			span{
+				position: relative;
+				display: inline-block;
+				height: 13px;
+				padding: 0 17px;
+				&:before{
+					content: '';
+					position: absolute;
+					left: -800px;
+					top: 5px;
+					display: inline-block;
+					height: 100%;
+					width: 800px;
+					background-color: #fff;
+				}
+				&:after{
+					content: '';
+					position: absolute;
+					right: -800px;
+					top: 5px;
+					display: inline-block;
+					height: 100%;
+					width: 800px;
+					background-color: #fff;
+				}
+			}
+		}
+		&_address{
+			background-color: #2c2c2c;
+			color: #fff;
+			text-align: center;
+			border-bottom: 13px solid #8700bf;
+			padding-bottom: 11px;
+		}
+		&_phone{
+			background-color: #a760c5;
+			color: #fff;
+			text-align: center;
+			font-family: $fontBold;
+			font-size: 23px;
+			position: relative;
+			padding: 6px 0;
+			&:before{
+				content: '';
+				position: absolute;
+				left: 32px;
+				top: 7px;
+				width: 19px;
+				height: 19px;
+				background: transparent url('../images/hf-icons.png') -86px -2px no-repeat;
+			}
+		}
+	}
+}

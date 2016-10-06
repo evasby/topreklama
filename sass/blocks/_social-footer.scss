@@ -1,5 +1,8 @@
 .social-footer{
 	text-align: center;
+	@include m7{
+		margin-bottom: 32px;
+	}
 	&_title{
 		background-color: #ab63c9;
 		font-family: $fontBold;
