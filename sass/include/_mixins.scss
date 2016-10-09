@@ -16,6 +16,9 @@
 @mixin m8 {
   @media screen and (min-width: 1024px) { @content; }
 }
+@mixin m9 {
+  @media screen and (min-width: 1280px) { @content; }
+}
 //*********************************************************************************/
 @mixin placeholder($color, $opacity:1){
   ::-webkit-input-placeholder { /* Safari, Chrome and Opera */

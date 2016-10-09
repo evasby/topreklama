@@ -64,36 +64,27 @@
 		</nav>
 	</header>
 	<div class="slider">
-		<div class="example-animation">
-      <div data-lazy-background="images/4247776023_81a3f048ca_b.png">
-          <h3 data-pos="['0%', '110%', '0%', '5%']" data-duration="700" data-effect="move">
-              Moving
-          </h3>
-          <div data-pos="['-30%', '25%', '40%', '25%']" data-duration="700" data-effect="move">
-              Text
-          </div>
-          <div data-pos="['56%', '-40%', '56%', '11%']" data-duration="700" data-effect="move">
-              and Image
-          </div>
-          <div data-pos="['23%', '110%', '23%', '42%']" data-duration="700" data-effect="move">
-              <img data-lazy-src="http://www.gravatar.com/avatar/fe3f1273001cb2e9ed9c9b067fcb1fd4?s=200"/>
-          </div>
-      </div>
-      <div data-lazy-background="images/4432435310_d5010f8efc_b.png">
-          <h3 data-pos="['0%', '8%']" data-duration="1000" data-effect="fadein">
-              Fadein
-          </h3>
-          <div data-pos="['44%', '15%']" data-duration="700" data-effect="fadein">
-              Text
-          </div>
-          <div data-pos="['66%', '11%']" data-duration="700" data-effect="fadein">
-              and Image
-          </div>
-          <div data-pos="['29%', '46%']" data-duration="700" data-delay="500" data-effect="fadein">
-              <img data-lazy-src="http://www.gravatar.com/avatar/fe3f1273001cb2e9ed9c9b067fcb1fd4?s=200"/>
-          </div>
-      </div>          
-    </div>
+	  <div class="slider_content">
+	  	<div class="slide">
+	  		<img class="slider_bac" src="images/slider/slider-1-bac.jpg" data-in="fade" data-out="fade">
+  			<img src="images/slider/slider-1-medusa.png" data-step="0">
+  			<img src="images/slider/slider-1-name.png" data-step="0">
+  			<h3 data-step="1">
+            Закажите
+        </h3>
+        <div data-step="2">
+            Изготовление из любых материалов <br>
+            Светодиодная и люминесцентная подсветка <br>
+            Разные размеры и формы конструкции
+        </div>
+	  	</div>
+	  	<div class="slide">
+	  		<img class="slider_bac" src="images/slider/slider-2-bac.jpg" data-step="0" data-in="fade" data-out="fade">
+	  		<img src="images/slider/slider-1-medusa.png" data-step="0">
+  			<img src="images/slider/slider-1-name.png" data-step="1">
+	  	</div>
+	  </div>
+		<!-- <div class="fs_loader"></div> -->
 	</div>
 	<div class="siteinner">
 		<div class="container-front">
@@ -458,7 +449,7 @@
 	<script src="bower_components/lightslider/dist/js/lightslider.min.js"></script>
 	<script src="bower_components/ev-emitter/ev-emitter.js"></script>
 	<script src="bower_components/imagesloaded/imagesloaded.js"></script>
-	<script src="js/jquery.devrama.slider.min-0.9.4.js"></script>
+	<script src="js/jquery.fractionslider.js"></script>
 	<!-- endbower -->
 	<!-- endbuild -->
 		<script src="http://maps.googleapis.com/maps/api/js?v=3.exp"></script>

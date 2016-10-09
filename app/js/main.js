@@ -18,19 +18,97 @@ $(document).ready(function(){
 
 
   if (!mobile) {
-
-  	$('.example-animation').DrSlider({
-  		//width: 1680,
-      //height: 427,
-      //userCSS: true
-      progressColor: '#AB63C9',
-      transition: 'fade',
-      showNavigation: false,
-      onReady: function(){
-      	console.log('go');
-      }
+  	function test(){
+  		console.log('++');
+  	}
+  	/*$('.slider').fractionSlider({
+  		'fullWidth': true,
+  		'responsive': true,
+  		//'autoChange': false,
+  		'transitionIn': 'fade',
+  		'transitionOut': 'fade',
+  		'dimensions': 			"1680,427",
+  		//'delay' : 0
+  		'speedOut' : 0
+  	});*/
+  	$('.slider_content').fractionSlider({
+  		'autoChange': false,
+  		'fullWidth': true,
+  		'responsive': true,
+  		'dimensions': '1170,427',
+  		'startCallback': function(el, currentSlide, lastSlide, step ){
+  			console.log('++');
+  			//$('.slider').fractionSlider('startNextSlide');
+  			// your custom code
+			  /* paramters:
+			  el = the slider element
+			  currentSlide = the current slide (in case of nextSlideCallback etc. its the new slide)
+			  lastSlide = the last/previouse slide
+			  step = the current step
+			  */
+			  	
+  		},
+  		/*'prevSlideCallback': function(el, currentSlide, lastSlide, step ){
+  			console.log('--');
+  			$('.slider').fractionSlider('startPrevSlide');		
+  		},*/
+  		'controls' : true,
+			'pager' : true,
+			//'pauseOnHover' : true
+			//'delay' : 0
+			'speedOut' : 0,
+			'speedIn': 1300,
+			//'slideTransitionSpeed': 0
   	});
+  	function parallax(){
+  		console.log('-');
+  		$('.slider_bac').each(function(){
+  			$(this).removeClass('mousemove');
+  		});
+  		setTimeout(function() {
+  			$('.slider_bac').each(function(){
+  				$(this).addClass('mousemove');
+  			});	
+	  		$('.slider_content').mousemove(function(e){
 
+						/* Work out mouse position */
+						var offset = $(this).offset();
+						var xPos = e.pageX - offset.left;
+						var yPos = e.pageY - offset.top;
+
+						/* Get percentage positions */
+						var mouseXPercent = Math.round(xPos / $(this).width() * 100);
+						var mouseYPercent = Math.round(yPos / $(this).height() * 100);
+
+						/* Position Each Layer */
+						$(this).find('.mousemove').each(
+							function(){
+								var diffX = $('.slider_content').width() - $(this).width();
+								var diffY = $('.slider_content').height() - $(this).height();
+
+								var myX = diffX * (mouseXPercent / 100); //) / 100) / 2;
+
+								var myY = diffY * (mouseYPercent / 100);
+
+								var cssObj = {
+									'left': myX + 'px',
+									'top': myY + 'px'
+								}
+								//$(this).css(cssObj);
+								$(this).animate({left: myX, top: myY},{duration: 50, queue: false, easing: 'linear'});
+							}
+						);
+						
+				});
+			}, 3000)
+  	}
+  	parallax();
+		$('.next').click(function(){
+			parallax();
+		});
+		$('.prev').click(function(){
+			parallax();
+		});
 		$('.clients_item').each(function(){
 			$(this).hover(
 				function(){

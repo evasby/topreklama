@@ -2,7 +2,31 @@
 	display: none;
 	@include m7{
 		display: block;
-		//height: 427px;
-		//background-color: #ccc;
+		position: relative;
+		width: 100%;
+		max-height: 427px;
+		background: #2D2D2D;
+		margin: 0 auto;
+		overflow: hidden;
+		h3{
+			font-family: $fontLight;
+			font-size: 64px;
+			color: #fff;
+			text-transform: uppercase;
+		}
+		div{
+			font-family: $fontBold;
+			font-size: 12px;
+			color: #fff;
+			text-transform: uppercase;
+		}
+		&_content{
+			margin: 0 auto;
+		}
+		&_bac{
+			width: 1680px!important;
+			height: auto!important;;
+			left:-22%!important;
+		}
 	}
 }
