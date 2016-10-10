@@ -1,0 +1,132 @@
+.actions{
+	//margin: 15px 0 15px;
+	//text-align: center;
+	@include m7{
+		//margin: 0;
+		//text-align: center;
+		@include clearfix;
+	}
+	&_item{
+		display: block;
+		width: auto;
+		max-width: 270px;
+		margin: 0 auto 21px auto;
+		text-decoration: none;
+		text-align: center;
+		@include m7{
+			float: left;
+			width: 31.03%;
+			max-width: none;
+			margin: 0 1.72%;
+			padding: 0 0 62px;
+			&:nth-child(3n-2){
+				margin-left: 0;
+			}
+			&:nth-child(3n){
+				margin-right: 0;
+			}
+		}
+	}
+	&_image{
+		position: relative;
+		img{
+			display: block;
+			width: 100%;
+			height: auto;
+		}
+		.actions-block_item:hover &{
+			&:before{
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				display: block;
+				background-color: #ab63c9;
+				opacity: 0.4;
+			}
+		}
+	}
+	&_title{
+		background-color: #e9e9e9;
+		font-family: $fontBold;
+		font-size: 14px;
+		color: #2e2e2e;
+		text-transform: uppercase;
+		padding: 10px 15px;
+		line-height: 25px;
+	}
+	&_descr{
+		background-color: #ab63c9;
+		font-family: $fontBold;
+		font-size: 12px;
+		color: #fff;
+		text-transform: uppercase;
+		padding: 19px 15px 19px 28px;
+		line-height: 16px;
+		text-align: left;
+		/*position: relative;
+		&:before{
+			content: '';
+			position: absolute;
+			z-index: -1;
+			bottom: 0px;
+			left: 0;
+			width: 100%;
+			height: 35px;
+			background-color: #000;
+			transition: bottom, 0.2s;
+			.actions_item:hover &{
+				bottom: -35px;
+			}
+		}*/
+	}
+	&_move{
+		height: 35px;
+		overflow: hidden;
+		position: relative;
+		span{
+			display: block;
+			background-color: #2f2f2f;
+			font-family: $fontBold;
+			font-size: 10px;
+			color: #fdfdfd;
+			text-transform: uppercase;
+			text-align: center;
+			padding: 10px 0;
+			position: absolute;
+			top: -50px;
+			left: 0;
+			width: 100%;
+			transition: top, 0.2s;
+			position: relative;
+			@include m8{
+				font-size: 14px;
+			}
+			@include m9{
+				&:before{
+					content: '';
+					position: absolute;
+					background-color: #fdfdfd;
+					top: 50%;
+					left: 9px;
+					width: 14px;
+					height: 1px;
+				}
+				&:after{
+					content: '';
+					position: absolute;
+					background-color: #fdfdfd;
+					top: 50%;
+					right: 9px;
+					width: 14px;
+					height: 1px;
+				}
+			}	
+			.actions_item:hover &{
+				top: 0px;
+			}
+		}
+	}
+}

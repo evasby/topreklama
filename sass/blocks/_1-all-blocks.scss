@@ -8,8 +8,10 @@
 @import "menu-top";
 
 @import "slider";
+@import "page-head";
 
 @import "container-front";
+@import "container";
 
 @import "clients";
 
@@ -19,6 +21,10 @@
 @import "block-video";
 @import "block-callback";
 @import "content";
+
+
+@import "actions";
+
 
 @import "bestsellers";
 @import "block-reviews";
@@ -34,3 +40,4 @@
 @import "social-footer";
 @import "wfs";
 @import "sitemap";
+@import "up";

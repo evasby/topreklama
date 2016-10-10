@@ -73,16 +73,29 @@
 
 .fs-pager-wrapper{
 	position:absolute;
-	left:10px; bottom:10px;
-	z-index:9999;	
+	left: 10px;
+	right: 10px;
+	bottom: 26px;
+	z-index: 9999;
+	text-align: center;
 }
 
 .fs-pager-wrapper a{
-	display:inline-block;
-	width:14px; height:14px;
-	margin:0 5px 0 0;
-	background:url(../images/fs.pager.png) 0px -14px no-repeat transparent;
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	margin: 0 10px 0 0;
+	background-color: #fff;
+	border-radius: 50%;
+	background: linear-gradient(135deg, rgba(184,156,192,1) 0%, rgba(255,255,255,1) 100%);
+	box-shadow: inset 1px 1px 1px 0px rgba(57,0,84,1),
+	 						1px 1px 2px 0px rgba(208,151,222,1);
+	&:hover{
+		background-color: #952dc0;
+	  background: linear-gradient(135deg, rgba(129,45,159,1) 0%, rgba(192,133,212,1) 100%);
+	}
 }
 .fs-pager-wrapper .active{
-	background:url(../images/fs.pager.png) 0px 0px no-repeat transparent;
+	background-color: #952dc0;
+	background: linear-gradient(135deg, rgba(129,45,159,1) 0%, rgba(192,133,212,1) 100%);
 }

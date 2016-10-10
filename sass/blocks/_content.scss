@@ -1,9 +1,7 @@
 .content{
-	border-bottom: 3px solid #ab63c9;
-	margin-bottom: 25px;
-	@include m7{
-		padding-bottom: 20px;
-	}
+	.container-front &{
+		border-bottom: 3px solid #ab63c9;
+	}	
 	h1{
 		font-family: $fontRegular;
 		font-size: 36px;
@@ -33,12 +31,18 @@
 			}
 		}
 	}
-	p{
-		font-size: 14px;
-		line-height: 18px;
-		margin-bottom: 18px;
+	&_user{
+		margin-bottom: 25px;
 		@include m7{
-			margin-bottom: 36px;
+			padding-bottom: 20px;
+		}
+		p{
+			font-size: 14px;
+			line-height: 18px;
+			margin-bottom: 18px;
+			@include m7{
+				margin-bottom: 36px;
+			}
 		}
 	}
 }
