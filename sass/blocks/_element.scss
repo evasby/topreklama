@@ -1,0 +1,12 @@
+.element{
+	&_body{
+		p{
+			font-size: 14px;
+			line-height: 18px;
+			margin-bottom: 18px;
+			@include m7{
+				margin-bottom: 18px;
+			}
+		}
+	}
+}

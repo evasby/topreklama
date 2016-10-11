@@ -31,7 +31,73 @@ $(document).ready(function(){
     }else{
       mobile = false;
     }
+    //resizeColorBox();
   });
+
+	$('.levelslider_pager').bxSlider({
+		slideWidth: 244,
+    minSlides: 3,
+    maxSlides: 3,
+    slideMargin: 24,
+    pager: false,
+    infiniteLoop: false,
+    hideControlOnEnd: true,
+    onSliderLoad: function(){
+  		$('.levelslider_list').bxSlider({
+  			pagerCustom: '.levelslider_pager',
+  			controls: false,
+			});
+  	}
+	});
+	/*$('.levelslider_list').bxSlider({
+		pagerCustom: '.levelslider_pager',
+  	controls: false,
+    onSliderLoad: function(){
+  		$('.levelslider_pager').bxSlider({
+  			slideWidth: 240,
+		    minSlides: 3,
+		    maxSlides: 3,
+		    slideMargin: 30,
+		    pager: false,
+			});
+  	}
+	});*/
+
+
+  
+	$('a.levelslider_link').colorbox({
+		rel:'gal',
+		maxWidth:'95%',
+		maxHeight:'95%'
+	});
+	var resizeTimer;
+	function resizeColorBox()
+	{
+    if (resizeTimer) clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(function() {
+      if ($('#cboxOverlay').is(':visible')) {
+         $('a.levelslider_link').colorbox.resize({width:"95%"});
+      }
+    }, 300)
+	}
+	window.addEventListener("orientationchange", resizeColorBox, false);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
   if (!mobile) {

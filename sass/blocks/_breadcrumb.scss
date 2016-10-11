@@ -1,0 +1,36 @@
+.breadcrumb{
+	display: none;
+	@include m7{
+		display: inline-block;
+		background-color: #d0d0d0;
+		padding: 1px 17px 4px 13px;
+		@include clearfix;
+		margin-bottom: 7px;
+		&_item{
+			float: left;
+			a{
+				@include link(#000, #000);
+				text-decoration: none;
+				font-family: $fontRegular;
+				font-size: 12px;
+				margin-right: 3px;
+				&:hover{
+					text-decoration: underline;
+				}
+			}
+			span{
+				color: #000;
+				font-family: $fontRegular;
+				font-size: 12px;
+			}
+			i{
+				display: inline-block;
+				position: relative;
+				top: 1px;
+				width: 10px;
+				height: 10px;
+				background: transparent url('../images/breadcrumb-arrow.png') left top no-repeat;
+			}
+		}
+	}
+}

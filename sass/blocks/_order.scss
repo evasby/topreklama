@@ -1,0 +1,29 @@
+.order{
+	@include m7{
+		margin-bottom: 95px;
+	}
+	&_all{
+		display: none;
+		@include m7{
+			display: block;
+			img{
+				display: block;
+				width: 100%;
+				max-width: 677px;
+				margin: 0 auto;
+			}
+		}
+	}
+	&_item{
+		max-width: 204px;
+		margin: 0 auto;
+		padding: 15px 0;
+		img{
+			width: 100%;
+			height: auto;
+		}
+		@include m7{
+			display: none;
+		}
+	}
+}

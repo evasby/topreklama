@@ -12,6 +12,9 @@
 	margin-bottom: 30px;
 	@include m7{
 		margin-bottom: 58px;
+		.element &{
+			margin-bottom: 98px;
+		}
 	}
 	&_title{
 		text-align: center;

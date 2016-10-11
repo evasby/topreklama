@@ -1,0 +1,99 @@
+.levelslider{
+	margin-bottom: 48px;
+	&_link{
+		display: block;
+		img{
+			width: 100%;
+			height: auto;
+			display: block;
+		}
+	}
+	&>.bx-wrapper{
+		margin-bottom: 15px;
+		&>.bx-viewport{
+			box-shadow: 2px 2px 2px 0px rgba(79,79,79,0.38);
+		}
+	}
+	&_inner{
+		padding: 9px 45px;
+		position: relative;
+		background-color: #e8e8e8;
+		.bx-prev{
+			display: block;
+			position: absolute;
+			left: 10px;
+			top: 50%;
+			margin-top: -40px;
+			width: 21px;
+			height: 80px;
+			background: transparent url('../images/levelslider-arrows.png') left top no-repeat;
+			text-indent: 100%;
+			white-space: nowrap;
+			overflow: hidden;
+			opacity: 0.7;
+			transition: opacity, 0.2s;
+			&:hover{
+				opacity: 1;
+			}
+			&.disabled{
+				display: none;
+			}
+		}
+		.bx-next{
+			display: block;
+			position: absolute;
+			right: 10px;
+			top: 50%;
+			margin-top: -40px;
+			width: 21px;
+			height: 80px;
+			background: transparent url('../images/levelslider-arrows.png') -21px top no-repeat;
+			text-indent: 100%;
+			white-space: nowrap;
+			overflow: hidden;
+			opacity: 0.7;
+			transition: opacity, 0.2s;
+			&:hover{
+				opacity: 1;
+			}
+			&.disabled{
+				display: none;
+			}
+		}
+	}
+	&_pager{
+		overflow: hidden;
+		padding-bottom: 5px;
+		a{
+			display: block;
+			padding: 0 5px 5px 0;
+			background-color: #e8e8e8;
+			span{
+				display: block;
+				box-shadow: 2px 2px 2px 0px rgba(79,79,79,0.38);
+				
+			}
+			&:hover span, &.active span{
+				position: relative;
+				&:before{
+					content: '';
+					background-color: #fff;
+					position: absolute;
+					top: 0;
+					left: 0;
+					width: 100%;
+					height: 100%;
+					opacity: 0.55;
+				}
+			}
+		}
+		
+		img{
+			width: 100%;
+			height: auto;
+			display: block;
+		}
+		
+		
+	}
+}

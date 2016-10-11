@@ -1,0 +1,86 @@
+.block-order{
+	display: none;
+	@include m7{
+		display: block;
+		padding: 41px 12px 45px;
+		margin-bottom: 87px;
+		background: transparent url('../images/block-order-bac.jpg') 50% 50% no-repeat;
+		background-size: cover;
+		@include clearfix;
+		&_item{
+			float: left;
+			width: 33.33%;
+		}
+		&_mail{
+			background-color: #fff;
+			color: #000;
+			font-family: $fontLight;
+			font-size: 16px;
+			display: inline-block;
+			height: 31px;
+			display: block;
+			max-width: 268px;
+			margin: 9px auto 0;
+			text-align: center;
+			padding: 7px 0;
+			box-shadow: 2px 2px 2px 0px rgba(0,0,0,0.38);
+			position: relative;
+			&:before{
+				content: '';
+				display: block;
+				position: absolute;
+				top: 10px;
+				left: 12px;
+				width: 16px;
+				height: 13px;
+				background: transparent url('../images/hf-icons.png') -30px -4px no-repeat;
+			}
+		}
+		&_phone{
+			background-color: #fff;
+			color: #000;
+			font-family: $fontLight;
+			font-size: 20px;
+			display: block;
+			height: 31px;
+			max-width: 268px;
+			margin: 9px auto 0;
+			text-align: center;
+			padding: 5px 0;
+			box-shadow: 2px 2px 2px 0px rgba(0,0,0,0.38);
+			position: relative;
+			&:before{
+				content: '';
+				display: block;
+				position: absolute;
+				top: 9px;
+				left: 17px;
+				width: 15px;
+				height: 15px;
+				background: transparent url('../images/hf-icons.png') -15px -3px no-repeat;
+			}
+		}
+		&_button{
+			display: block;
+			max-width: 213px;
+			margin: 0 auto;
+			background: #a045c7;
+			background: linear-gradient(to bottom, #a861c6 0%, #9945bc 100%);
+			//box-shadow: inset 0px 1px 1px 0px rgba(255,255,255,1), 2px 2px 2px 0px rgba(11,11,11,0.38);
+			box-shadow: inset 0px 1px 1px 1px rgba(255,255,255,0.29),
+									0px 2px 2px 0px rgba(0,0,0,0.1);
+			font-family: $fontBold;
+			@include link(#ffffff, #ffffff);
+			font-size: 18px;
+			text-transform: uppercase;
+			text-decoration: none;
+			text-align: center;
+			//height: 36px;
+			padding: 16px 0;
+			border-radius: 4px;
+			&:hover{
+				background: linear-gradient(to bottom, #9945bc 0%, #a861c6 100%);
+			}
+		}
+	}
+}
