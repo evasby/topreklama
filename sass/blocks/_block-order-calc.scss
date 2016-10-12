@@ -1,3 +1,127 @@
 .block-order-calc{
-	background: transparent url('../images/block-order-calc-bac.jpg') right top no-repeat;
+	background: transparent url('../images/block-order-calc-bac.jpg') right 50% no-repeat;
+	background-size: cover;
+	border: 1px solid #ddcbe4;
+	box-shadow: 0px 2px 24px 0px rgba(11,11,11,0.53);
+	margin-bottom: 15px;
+	&__contact{
+		background: transparent url('../images/block-order-calc-bac-contact.jpg') right 50% no-repeat;
+	}
+	@include m7{
+		margin-bottom: 65px;
+	}
+	&_inner{
+		max-width: 372px;
+	}
+	&_title{
+		border-top: 30px solid #8929b1;
+		font-family: $fontBold;
+		font-size: 30px;
+		color: #ab63c9;
+		background-color: #f4f4f4;
+		text-align: center;
+		text-transform: uppercase;
+		margin-bottom: 30px;
+	}
+	&_input{
+		max-width: 219px;
+		margin: 0 auto 17px auto;
+		position: relative;
+		box-shadow: -1px -1px 0px 0px rgba(131,60,159,1);
+		&__name{
+			&:before{
+				content: '';
+				position: absolute;
+				width: 17px;
+				height: 17px;
+				top: 5px;
+				left: 7px;
+				display: block;
+				background: transparent url('../images/block-order-calc-icons.png') left top no-repeat;
+			}
+		}
+		&__email{
+			&:before{
+				content: '';
+				position: absolute;
+				width: 17px;
+				height: 17px;
+				top: 5px;
+				left: 7px;
+				display: block;
+				background: transparent url('../images/block-order-calc-icons.png') -17px top no-repeat;
+			}
+		}
+		&__phone{
+			&:before{
+				content: '';
+				position: absolute;
+				width: 17px;
+				height: 17px;
+				top: 5px;
+				left: 7px;
+				display: block;
+				background: transparent url('../images/block-order-calc-icons.png') -34px top no-repeat;
+			}
+		}
+		input{
+			border: 1px solid #c6aecf;
+			width: 100%;	
+			height: 30px;
+			padding: 0 10px 0 34px;
+		}
+	}
+	textarea{
+		display: block;
+		border: 1px solid #c6aecf;
+		box-shadow: -1px -1px 0px 0px rgba(131,60,159,1);
+		width: 100%;
+		max-width: 292px;
+		height: 59px;
+		margin: 0 auto;
+		text-align: center;
+		padding: 10px;
+		position: relative;
+		z-index: 1;
+	}
+	&_bottom{
+		background-color: #222222;
+		padding: 41px 0 16px;
+		margin-top: -25px;
+		input{
+			display: block;
+			background: #a045c7;
+			background: linear-gradient(to bottom, #a045c7 0%, #8f25bd 100%);
+			border: none;
+			box-shadow: inset 0px 1px 1px 0px rgba(255,255,255,1), 2px 2px 2px 0px rgba(11,11,11,0.38);
+			width: 100%;
+			max-width: 123px;
+			margin: 0 auto;
+			font-family: $fontBold;
+			@include link(#ffffff, #ffffff);
+			font-size: 14px;
+			line-height: 36px;
+			text-transform: uppercase;
+			text-decoration: none;
+			text-align: center;
+			height: 36px;
+			border-radius: 4px;
+			&:hover{
+				background: linear-gradient(to bottom, #8f25bd 0%, #a045c7 100%);
+				cursor: pointer;
+			}
+		}
+	}
+	&_descr{
+		text-align: center;
+		font-family: $fontRegular;
+		font-size: 12px;
+		line-height: 14px;
+		color: #fff;
+		background-color: #922bbd;
+		border-top: 4px solid #eeeeee;
+		border-bottom: 4px solid #eeeeee;
+		padding: 6px 10px 10px;
+		margin-bottom: 13px;
+	}
 }

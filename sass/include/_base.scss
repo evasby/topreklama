@@ -55,36 +55,36 @@ a, input, textarea, select, button, div{
 pre{
   word-wrap: break-word;
 }
-/*::-webkit-input-placeholder {
-  font-family: $italic;
-  color: #434242;
-  font-size: 18px;
+::-webkit-input-placeholder {
+  font-family: $fontLight;
+  color: #444444;
+  font-size: 13px;
 }
 :-moz-placeholder {
-  font-family: $italic;
-  color: #434242;
-  font-size: 18px;
+  font-family: $fontLight;
+  color: #444444;
+  font-size: 13px;
 }
 ::-moz-placeholder {
-  font-family: $italic;
-  color: #434242;
-  font-size: 18px;
+  font-family: $fontLight;
+  color: #444444;
+  font-size: 13px;
 }
 :-ms-input-placeholder {
-  font-family: $italic;
-  color: #434242;
-  font-size: 18px;
+  font-family: $fontLight;
+  color: #444444;
+  font-size: 13px;
 }
 ::-ms-input-placeholder {
-  font-family: $italic;
-  color: #434242;
-  font-size: 18px;
+  font-family: $fontLight;
+  color: #444444;
+  font-size: 13px;
 }
 :placeholder-shown {
-  font-family: $italic;
-  color: #434242;
-  font-size: 18px;
-}*/
+  font-family: $fontLight;
+  color: #444444;
+  font-size: 13px;
+}
 .hide{
   display: none;
 }

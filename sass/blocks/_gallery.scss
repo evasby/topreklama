@@ -1,0 +1,92 @@
+.gallery{
+	@include m7{
+		margin-bottom: 3px;
+	}
+	&_inner{
+		@include m7{
+			@include clearfix;
+		}
+	}
+	&_descr{
+		font-family: $fontLight;
+		font-size: 18px;
+		line-height: 18px;
+		margin-bottom: 45px;
+	}
+	&_item{
+		display: block;
+		max-width: 260px;
+		margin: 0 auto 15px auto;
+		text-decoration: none;
+		@include link(#2f2f2f, #ab63c9);
+		@include m7{
+			float: left;
+			width: 29.88%;
+			margin: 0 2.59% 70px 2.59%;
+			&:nth-child(3n-2){
+				margin-left: 0;
+			}
+			&:nth-child(3n){
+				margin-right: 0;
+			}
+		}
+	}
+	&_image{
+		display: block;
+		position: relative;
+		margin-bottom: 8px;
+		@include m7{
+			margin-bottom: 18px;
+		}
+		&:before{
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background-color: #ab63c9;
+			opacity: 0;
+			transition: opacity, 0.2s;
+			.gallery_item:hover &{
+				opacity: 0.7;
+			}
+		}
+		img{
+			display: block;
+			width: 100%;
+			height: auto;
+		}
+	}
+	&_name{
+		display: block;
+		text-align: center;
+		font-family: $fontBold;
+		font-size: 24px;
+		line-height: 24px;
+		text-transform: uppercase;
+		position: relative;
+		padding: 7px 0 0;
+		@include m7{
+			padding: 12px 0 0;
+			line-height: 30px;
+		}
+		&:before{
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 50%;
+			margin-left: -38px;
+			width: 77px;
+			height: 3px;
+			background-color: #ab63c9;
+		}
+	}
+	&_top{
+		display: block;
+		color: #ab63c9;
+	}
+	&_bottom{
+		display: block;
+	}
+}

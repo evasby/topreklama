@@ -3,6 +3,9 @@
 	@include m7{
 		display: block;
 		padding: 27px 0 15px;
+		.content &{
+			padding: 27px 0 61px;
+		}
 		&_title{
 			text-align: center;
 			font-family: $fontRegular;
@@ -10,16 +13,23 @@
 			font-size: 36px;
 			margin-bottom: 38px;
 			overflow: hidden;
+			.content &{
+				font-size: 30px;
+				margin-bottom: 43px;
+			}
 			span{
 				position: relative;
 				display: inline-block;
 				height: 19px;
 				padding: 0 22px;
+				.content &{
+					height: 4px;
+				}
 				&:before{
 					content: '';
 					position: absolute;
 					left: -800px;
-					top: 11px;
+					top: 17px;
 					display: inline-block;
 					height: 100%;
 					width: 800px;
@@ -29,7 +39,7 @@
 					content: '';
 					position: absolute;
 					right: -800px;
-					top: 11px;
+					top: 17px;
 					display: inline-block;
 					height: 100%;
 					width: 800px;
@@ -48,6 +58,9 @@
 			width: 23.07%;
 			margin: 0 1.28% 39px 1.28%;
 			background-color: #eaeaea;
+			.content &{
+				margin: 0 1.28% 29px 1.28%;
+			}
 			&:first-child{
 				margin-left: 0;
 			}
@@ -56,6 +69,9 @@
 			}
 			.team_row__first &{
 				margin: 0 1.5% 39px 1.5%;
+				.content &{
+					margin: 0 1.5%29px 1.5%;
+				}
 				&:first-child{
 					margin-left: 11.96%;
 				}

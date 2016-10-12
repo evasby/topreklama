@@ -1,5 +1,8 @@
 .element{
 	&_body{
+		@include m7{
+			margin-bottom: 58px;
+		}
 		p{
 			font-size: 14px;
 			line-height: 18px;

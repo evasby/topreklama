@@ -1,0 +1,82 @@
+.work{
+	padding: 10px 0 30px;
+	@include m7{
+		padding: 0 0 43px;
+	}
+	&_item{
+		background: transparent url('../images/work-bac.jpg') 50% 50% no-repeat;
+		background-size: cover;
+		padding: 15px;
+		margin: 15px 0 0;
+		border: 1px solid #bbbbbb;
+		box-shadow: 3px 3px 27px 0px rgba(45,45,45,0.23);
+		@include m7{
+			@include clearfix;
+			padding: 10px 13px;
+			margin: 15px 0 42px;
+		}
+	}
+	&_image{
+		display: block;
+		max-width: 217px;
+		margin: 0 auto;
+		@include m7{
+			float: left;
+			width: 100%;
+			max-width: 217px;
+			position: relative;
+			&:before{
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				background-color: #ab63c9;
+				opacity: 0;
+				transition: opacity, 0.2s;
+			}
+			&:hover{
+				&:before{
+					opacity: 0.7;
+				}
+			}
+		}
+		img{
+			width: 100%;
+			height: auto;
+			display: block;
+		}
+	}
+	&_body{
+		@include m7{
+			overflow: hidden;
+			padding-left: 20px;
+		}
+	}
+	&_title{
+		display: block;
+		font-family: $fontBold;
+		font-size: 24px;
+		@include link(#2f2f2f, #ab63c9);
+		text-decoration: none;
+		text-transform: uppercase;
+		text-align: center;
+		padding: 5px 0;
+		@include m7{
+			text-align: left;
+			padding: 11px 0;
+			margin-bottom: 5px;
+		}
+	}
+	&_text{
+		font-family: $fontRegular;
+		color: #000;
+		font-size: 14px;
+		text-align: center;
+		@include m7{
+			text-align: left;
+			line-height: 16px;
+		}
+	}
+}
