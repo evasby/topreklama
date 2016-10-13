@@ -145,8 +145,11 @@
 		font-family: $fontLight;
 		font-size: 14px;
 		line-height: 18px;
-		padding: 0 43px;	
+		padding: 0 15px;
 		margin-bottom: 30px;
+		@include m4{
+			padding: 0 43px;
+		}
 		@include m7{
 			min-height: 274px;
 			margin-bottom: 0;

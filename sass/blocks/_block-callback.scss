@@ -58,11 +58,11 @@
 	}
 	&_descr{
 		border: 1px solid #2d2d2d;
-		margin: 0 34px;
+		margin: 0 15px;
 		font-size: 14px;
 		color: #000;
 		text-align: center;
-		padding: 20px 30px 50px;
+		padding: 20px 15px 50px;
 		position: relative;
 		&:before{
 			content: '';
@@ -74,9 +74,12 @@
 			left: 50%;
 			margin-left: -51px;
 		}
+		@include m4{
+			margin: 0 34px;
+			padding: 20px 30px 50px;
+		}
 	}
 	&_link{
-		//max-width: 320px;
 		display: inline-block;
 		padding: 0 10px;
 		margin: 0 auto;
@@ -96,10 +99,17 @@
 			font-family: $fontBold;
 			font-size: 14px;
 			text-transform: uppercase;
-			padding: 18px 37px;
+			padding: 9px 10px;
 			border-radius: 5px;
+			max-width: 150px;
 			&:hover{
 				background: linear-gradient(to bottom, #000000 0%, #262626 100%);
+			}
+		}
+		@include m4{
+			a{
+				max-width: none;
+				padding: 18px 37px;
 			}
 		}
 	}

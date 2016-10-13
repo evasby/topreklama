@@ -4,30 +4,37 @@
 	}	
 	h1{
 		font-family: $fontRegular;
-		font-size: 36px;
+		font-size: 24px;
 		color: #000;
 		background-color: #ab63c9;
-		height: 19px;
-		line-height: 12px;
+		line-height: 20px;
 		margin-bottom: 20px;
+		@include m4{
+			line-height: 12px;
+			font-size: 36px;
+			height: 19px;
+		}
 		@include m7{
 			margin-bottom: 38px;
 		}
 		span{
 			display: inline-block;
-			padding: 0 30px;
+			padding: 0 10px;
 			background-color: #fff;
-			height: 19px;
 			margin-left: 20px;
 			position: relative;
-			&:before{
-				content: '';
-				position: absolute;
-				right: 30px;
-				bottom: -10px;
-				width: 102px;
-				height: 3px;
-				background-color: #ab63c9;
+			@include m4{
+				padding: 0 30px;
+				height: 19px;
+				&:before{
+					content: '';
+					position: absolute;
+					right: 30px;
+					bottom: -10px;
+					width: 102px;
+					height: 3px;
+					background-color: #ab63c9;
+				}		
 			}
 		}
 	}

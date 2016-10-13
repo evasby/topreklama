@@ -1,15 +1,29 @@
 .menu-top{
 	background-color: #2d2d2d;
-	display: none;
-	@include m7{
-		display: block;
-		text-align: center;
-		padding: 14px 0 15px;
+	&_inner{
+		background-color: #2d2d2d;
+		position: fixed;
+		left: -100%;
+		top: 0;
+		width: 80%;
+		padding: 52px 0 5px 10px;
+		transition: left 0.2s;
+		z-index: 3;
+		.menu-top__on &{
+			left: 0;
+		}
+		@include m7{
+			position: static;
+			border: 0;
+			width: 100%;
+			text-align: center;
+			padding: 14px 0 15px;
+		}
 	}
 	&_item{
+		padding: 0 5px 9px 10px;
 		@include m7{
 			display: inline-block;
-			//border-left: 2px solid #e9e9e9;
 			position: relative;
 			padding: 0 5px 0 10px;
 			&:before{
@@ -35,5 +49,73 @@
 		font-size: 16px;
 		text-decoration: none;
 		text-transform: uppercase;
+	}
+	&_mobile{
+		position: fixed;
+		left: 0;
+    top: 0;
+    z-index: 4;
+    //width: 130px;
+    height: 40px;
+    background-color: #2d2d2d;
+    padding: 0 50px 0 10px;
+    cursor: pointer;
+		@include m7{
+			display: none;
+		}
+	}
+	&_close{
+		display: block;
+    position: absolute;
+    right: 10px;
+    top: 18px;
+    width: 30px;
+    height: 3px;
+    background-color: #e9e9e9;
+    .menu-top__on &{
+    	background-color: transparent;
+    }
+  }
+  &_close:before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: -9px;
+    background-color: #e9e9e9;
+    height: 3px;
+    width: 100%;
+    .menu-top__on &{
+    	transform: rotate(405deg) translate(6px, 6px);
+  	}
+  }
+  &_close:after{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 9px;
+    background-color: #e9e9e9;
+    height: 3px;
+    width: 100%;
+    .menu-top__on &{
+    	transform: rotate(-405deg) translate(7px, -7px);
+    }
+  }
+  &_close:after, &_close:before{
+    transition: all 0.3s;
+    backface-visibility: hidden;
+    border-radius: 2px;
+  }
+  &_title{
+  	text-transform: uppercase;
+		cursor: pointer;
+		font-family: $fontBold;
+    font-size: 16px;
+    line-height: 40px;
+    padding: 1px 0 5px;
+    text-align: center;
+    width: 120px;
+    color: #e9e9e9;
+    margin: 0 0 10px;
+    transition: all 0.4s;
 	}
 }

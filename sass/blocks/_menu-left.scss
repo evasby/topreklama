@@ -1,9 +1,85 @@
 .menu-left{
-	display: none;
-	@include m7{
-		display: block;
-		margin-bottom: 25px;
-		&_title{
+	&_inner{
+		background-color: #2d2d2d;
+		position: fixed;
+		right: -100%;
+		top: 0;
+		width: 80%;
+		padding: 49px 0 5px 10px;
+		transition: right 0.2s;
+		z-index: 3;
+		.menu-left__on &{
+			right: 0;
+		}
+		@include m7{
+			position: static;
+			border: 0;
+			width: 100%;
+			padding: 0;
+		}
+	}
+	&_list{
+		&__l2{
+			display: none;
+			@include m7{
+				display: block;
+				border-bottom: 2px solid #fff;
+			}
+		}
+	}
+	&_link{
+		font-family: $fontMyriad;
+		@include link(#e9e9e9, #d777ff);
+		font-size: 16px;
+		text-decoration: none;
+		text-transform: uppercase;
+		@include m7{
+			font-family: $fontBold;
+			font-size: 14px;
+			@include link(#fff, #fff);
+			display: block;
+			background-color: #ab63c9;
+			border-bottom: 3px solid #fff;
+			padding: 12px 40px 12px 15px;
+		}
+		img{
+			vertical-align: middle;
+			margin-right: 10px;
+			position: relative;
+			left: 0;
+			transition: left, 0.2s;
+		}
+		&:hover{
+			img{
+				left: -3px;
+			}
+		}
+		@include m7{
+			&__l2{
+				display: block;
+				background-color: #ddcbe4;
+				font-family: $fontRegular;
+				font-size: 18px;
+				@include link(#000, #fff);
+				text-decoration: none;
+				border-bottom: 1px solid #fff;
+				padding: 9px 0 9px 55px;
+				position: relative;
+				&:hover{
+					background-color: #2f2f2f;
+				}
+				&:before{
+					content: '-';
+					position: absolute;
+					left: 47px;
+					top: 9px;
+				}
+			}
+		}
+	}
+	&_title{
+		display: none;
+		@include m7{
 			background-color: #ab63c9;
 			font-family: $fontBold;
 			text-transform: uppercase;
@@ -18,11 +94,10 @@
 				color: #000;
 			}
 		}
-		&_list{
-			&__l2{
-				border-bottom: 2px solid #fff;
-			}
-		}
+	}
+	@include m7{
+		display: block;
+		margin-bottom: 25px;
 		&_item{
 			position: relative;
 			&__active{
@@ -49,48 +124,77 @@
 				}
 			}
 		}
-		&_link{
-			font-family: $fontBold;
-			font-size: 14px;
-			text-transform: uppercase;
-			@include link(#fff, #fff);
-			text-decoration: none;
-			display: block;
-			background-color: #ab63c9;
-			border-bottom: 3px solid #fff;
-			padding: 12px 40px 12px 15px;
-			img{
-				vertical-align: middle;
-				margin-right: 10px;
-				position: relative;
-				left: 0;
-				transition: left, 0.2s;
-			}
-			&:hover{
-				img{
-					left: -3px;
-				}
-			}
-			&__l2{
-				display: block;
-				background-color: #ddcbe4;
-				font-family: $fontRegular;
-				font-size: 18px;
-				@include link(#000, #fff);
-				text-decoration: none;
-				border-bottom: 1px solid #fff;
-				padding: 9px 0 9px 55px;
-				position: relative;
-				&:hover{
-					background-color: #2f2f2f;
-				}
-				&:before{
-					content: '-';
-					position: absolute;
-					left: 47px;
-					top: 9px;
-				}
-			}
+		
+	}
+	&_mobile{
+		position: fixed;
+		right: 0;
+    top: 0;
+    z-index: 4;
+    //width: 130px;
+    padding: 0 10px 0 50px;
+    height: 40px;
+    background-color: #2d2d2d;
+    cursor: pointer;
+		@include m7{
+			display: none;
 		}
 	}
+	&_mobtitle{
+  	text-transform: uppercase;
+		cursor: pointer;
+		font-family: $fontBold;
+    font-size: 16px;
+    line-height: 40px;
+    padding: 1px 0 5px;
+    text-align: center;
+    width: 120px;
+    color: #e9e9e9;
+    margin: 0 0 10px;
+    transition: all 0.4s;
+    @include m7{
+    	display: none;
+    }
+	}
+	&_close{
+		display: block;
+    position: absolute;
+    left: 10px;
+    top: 18px;
+    width: 30px;
+    height: 3px;
+    background-color: #e9e9e9;
+    .menu-left__on &{
+    	background-color: transparent;
+    }
+  }
+  &_close:before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: -9px;
+    background-color: #e9e9e9;
+    height: 3px;
+    width: 100%;
+    .menu-left__on &{
+    	transform: rotate(405deg) translate(6px, 6px);
+  	}
+  }
+  &_close:after{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 9px;
+    background-color: #e9e9e9;
+    height: 3px;
+    width: 100%;
+    .menu-left__on &{
+    	transform: rotate(-405deg) translate(7px, -7px);
+    }
+  }
+  &_close:after, &_close:before{
+    transition: all 0.3s;
+    backface-visibility: hidden;
+    border-radius: 2px;
+  }
 }

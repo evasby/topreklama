@@ -15,14 +15,15 @@
 				padding: 0 20px;
 				color: #000;
 				background-color: #fff;
-				height: 19px;
+				height: 21px;
 				margin: 0 0 0 20px;
 				position: relative;
+				top: -1px;
 				&:before{
 					content: '';
 					position: absolute;
 					right: 20px;
-					bottom: -10px;
+					bottom: -9px;
 					width: 35px;
 					height: 3px;
 					background-color: #ab63c9;
@@ -32,10 +33,20 @@
 		&_body{
 			max-width: 570px;
 			cursor: pointer;
+		}
+		&_img{
 			img{
 				display: block;
 				width: 100%;
 				height: auto;
+			}
+			&__off{
+				display: none;
+			}
+		}
+		&_iframe{
+			&__off{
+				display: none;
 			}
 		}
 	}

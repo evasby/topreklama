@@ -22,14 +22,22 @@
 		overflow: hidden;
 		width: 30px;
 		height: 30px;
+		//margin-left: 16px;
 		margin-left: 19px;
 		opacity: 0.8;
 		transition: opacity, 0.2s;
+		@include m4{
+			margin-left: 19px;
+		}
 		&:hover{
 			opacity: 1;
 		}
 		&:first-child{
-			margin: 0;
+			//margin-left: 5px;
+			margin-left: 0;
+			@include m4{
+				//margin-left: 0;
+			}
 		}
 		&__fb{
 			background: transparent url('../images/social.png') left top no-repeat;
