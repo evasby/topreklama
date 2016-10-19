@@ -35,6 +35,9 @@
 .fs_loader{
 	width:100%; height:400px;
 	background:url(../images/fs.spinner.gif) center center no-repeat transparent;
+	position: absolute;
+	top: 0;
+	left: 0;
 }
 
 /** CONTROLS **/
