@@ -11,11 +11,19 @@
 	width: 100%;
 	max-width: 290px;
 	&__address{
-		color: #000;
+		display: none;
+		@include m7{
+			display: block;
+			color: #000;
+		}
 	}
 	&__callback{
-		//background: transparent url('../images/block-square-rotated.png') right top no-repeat;
-		font-family: $fontLight;
+		display: none;
+		@include m7{
+			display: block;
+			//background: transparent url('../images/block-square-rotated.png') right top no-repeat;
+			font-family: $fontLight;
+		}
 	}
 	p{
 		max-width: 140px;

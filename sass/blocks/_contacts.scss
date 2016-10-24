@@ -22,6 +22,8 @@
 		}
 		p{
 			margin-bottom: 22px;
+			font-size: 20px;
+			line-height: 24px;
 		}
 	}
 	&_address{
@@ -38,6 +40,8 @@
 		}
 		p{
 			margin-bottom: 22px;
+			font-size: 20px;
+			line-height: 24px;
 		}
 	}
 	&_phone{
@@ -46,14 +50,17 @@
 		&:before{
 			content: '';
 			position: absolute;
-			top: 0;
-			left: 0;
+			top: -2px;
+			left: 2px;
 			width: 32px;
 			height: 32px;
-			background: transparent url('../images/contacts-icons.png') -64px top no-repeat;
+			background: transparent url('../images/phone.png') left top no-repeat;
+			background-size: contain;
 		}
 		p{
 			margin-bottom: 22px;
+			font-size: 20px;
+			line-height: 24px;
 		}
 	}
 	&_email{
@@ -63,13 +70,16 @@
 			content: '';
 			position: absolute;
 			top: 0;
-			left: 0;
+			left: 2px;
 			width: 32px;
 			height: 32px;
-			background: transparent url('../images/contacts-icons.png') -96px top no-repeat;
+			background: transparent url('../images/mail.png') left top no-repeat;
+			background-size: contain;
 		}
 		p{
 			margin-bottom: 22px;
+			font-size: 20px;
+			line-height: 24px;
 		}
 	}
 }

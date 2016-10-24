@@ -21,9 +21,11 @@
 	&_list{
 		&__l2{
 			display: none;
-			@include m7{
-				display: block;
+			@include m7{	
 				border-bottom: 2px solid #fff;
+				.menu-left_item__active &{
+					display: block;
+				}
 			}
 		}
 	}
@@ -87,7 +89,7 @@
 			text-transform: uppercase;
 			font-size: 18px;
 			text-align: left;
-			margin: 0 0 18px;
+			margin: 0 0 26px;
 			padding: 0 0 0 20px;
 			span{
 				display: inline-block;

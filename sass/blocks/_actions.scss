@@ -56,6 +56,14 @@
 		text-transform: uppercase;
 		padding: 10px 15px;
 		line-height: 25px;
+		p{
+			font-size: 14px;
+			color: #2e2e2e;
+			text-transform: uppercase;
+			padding: 0;
+			line-height: 25px;
+			margin: 0;
+		}
 	}
 	&_descr{
 		background-color: #ab63c9;
@@ -113,6 +121,7 @@
 					left: 9px;
 					width: 14px;
 					height: 1px;
+					transition: left, 0.2s;
 				}
 				&:after{
 					content: '';
@@ -122,10 +131,24 @@
 					right: 9px;
 					width: 14px;
 					height: 1px;
+					transition: right, 0.2s;
 				}
 			}	
 			.actions_item:hover &{
 				top: 0px;
+			}
+		}
+		@include m9{
+			&:hover{
+				span{
+					text-decoration: underline;
+					&:before{
+						left: -30px;
+					}
+					&:after{
+						right: -30px;
+					}
+				}
 			}
 		}
 	}

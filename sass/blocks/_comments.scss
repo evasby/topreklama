@@ -1,0 +1,83 @@
+.khayr_main_comment{
+	padding-top: 70px;
+	h2{
+		font-family: $fontBold;
+		font-size: 24px;
+		text-align: center;
+		text-transform: uppercase;
+		margin-bottom: 34px;
+	}
+	&_title{
+		font-family: $fontBold;
+		font-size: 24px;
+		color: #ab63c9;
+		height: 42px;
+		line-height: 42px;
+		background-color: #fff;
+		text-transform: uppercase;
+		padding: 0 0 0 46px;
+		position: relative;
+		&:before{
+			content: '';
+			position: absolute;
+			left: 0;
+			top: -24px;
+			width: 309px;
+			height: 24px;
+			background-color: #912bbb;
+		}
+		&:after{
+			content: '';
+			position: absolute;
+			left: 309px;
+			top: -24px;
+			width: 4px;
+			height: 24px;
+			background-color: #fff;
+		}
+	}
+	.comments{
+		.stock{
+			padding: 10px 15px;
+			background: transparent url('../images/comment-bac.png') left top no-repeat;
+			background-size: 100% 100%;
+			margin-bottom: 44px;
+			box-shadow: 2px 2px 2px 0px rgba(11,11,11,0.38);
+			.userInfo{
+				font-family: $fontMyriadRegular;
+				font-size: 24px;
+				color: #2b2b2b;
+				background: none;
+				position: relative;
+				height: 25px;
+				&:before{
+					content: '';
+					position: absolute;
+					left: 0;
+					bottom: 0;
+					width: 67px;
+					height: 2px;
+					background-color: #ab63c9;
+				}
+			}
+			.userText{
+				margin: 0;
+				p{
+					margin-bottom: 20px;
+				}
+			}
+		}
+	}
+	.form{
+		border: 1px solid #ddcbe4;
+		background: none;
+		background: #a661c4;
+    background: linear-gradient(to right, #a661c4 0%, #aa63c9 100%);
+    margin: 0 0 52px;
+    padding: 24px 0 0;
+    box-shadow: 0px 2px 24px 0px rgba(11,11,11,0.53);
+    form{
+    	background-color: transparent;
+    }
+	}
+}

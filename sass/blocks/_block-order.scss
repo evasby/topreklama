@@ -65,7 +65,7 @@
 			max-width: 213px;
 			margin: 0 auto;
 			background: #a045c7;
-			background: linear-gradient(to bottom, #a861c6 0%, #9945bc 100%);
+	    background: linear-gradient(to bottom, #a045c7 0%, #8f25bd 100%);
 			//box-shadow: inset 0px 1px 1px 0px rgba(255,255,255,1), 2px 2px 2px 0px rgba(11,11,11,0.38);
 			box-shadow: inset 0px 1px 1px 1px rgba(255,255,255,0.29),
 									0px 2px 2px 0px rgba(0,0,0,0.1);
@@ -79,7 +79,7 @@
 			padding: 16px 0;
 			border-radius: 4px;
 			&:hover{
-				background: linear-gradient(to bottom, #9945bc 0%, #a861c6 100%);
+				background: linear-gradient(to bottom, #8f25bd 0%, #a045c7 100%);
 			}
 		}
 	}

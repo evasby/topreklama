@@ -58,6 +58,7 @@
 			width: 23.07%;
 			margin: 0 1.28% 39px 1.28%;
 			background-color: #eaeaea;
+			cursor: pointer;
 			.content &{
 				margin: 0 1.28% 29px 1.28%;
 			}
@@ -79,6 +80,13 @@
 					margin-right: 12.39%;
 				}
 			}
+
+
+		}
+		&_hitem{
+			max-width: 349px;
+			padding: 44px 0 26px;
+			background-color: #eaeaea;
 		}
 		&_image{
 			max-width: 210px;
@@ -113,6 +121,17 @@
 			font-size: 14px;
 			color: #ab63c9;
 			text-align: center;
+		}
+		&_descr{
+			background-color: #ab63c9;
+			color: #fff;
+			padding: 16px 55px 19px 55px;
+			margin-top: 25px;
+			font-size: 14px;
+			line-height: 18px;
+		}
+		&_hide{
+			display: none;
 		}
 	}
 }

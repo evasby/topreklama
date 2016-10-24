@@ -3119,7 +3119,10 @@ pre {
 .fs_loader {
   width: 100%;
   height: 400px;
-  background: url(../images/fs.spinner.gif) center center no-repeat transparent; }
+  background: url(../images/fs.spinner.gif) center center no-repeat transparent;
+  position: absolute;
+  top: 0;
+  left: 0; }
 
 /** CONTROLS **/
 .fraction-slider .prev,
@@ -3288,9 +3291,17 @@ pre {
   width: 100%;
   max-width: 290px; }
   .block-square__address {
-    color: #000; }
+    display: none; }
+    @media screen and (min-width: 768px) {
+      .block-square__address {
+        display: block;
+        color: #000; } }
   .block-square__callback {
-    font-family: "fontlight"; }
+    display: none; }
+    @media screen and (min-width: 768px) {
+      .block-square__callback {
+        display: block;
+        font-family: "fontlight"; } }
   .block-square p {
     max-width: 140px; }
   .block-square a {
@@ -3514,6 +3525,7 @@ pre {
     .slider {
       display: block;
       position: relative;
+      z-index: 1;
       width: 100%;
       max-height: 427px;
       background: #2D2D2D;
@@ -3541,9 +3553,9 @@ pre {
       .slider_content {
         margin: 0 auto; }
       .slider_bac {
-        width: 1680px !important;
+        width: 1920px !important;
         height: auto !important;
-        left: -22% !important; } }
+        left: -32% !important; } }
   .slider .prev,
   .slider .prev:hover {
     display: block;
@@ -3848,8 +3860,9 @@ pre {
   display: none; }
   @media screen and (min-width: 768px) {
     .menu-left_list__l2 {
-      display: block;
-      border-bottom: 2px solid #fff; } }
+      border-bottom: 2px solid #fff; }
+      .menu-left_item__active .menu-left_list__l2 {
+        display: block; } }
 
 .menu-left_link {
   font-family: "fontmyriad";
@@ -3873,7 +3886,8 @@ pre {
       display: block;
       background-color: #ab63c9;
       border-bottom: 3px solid #fff;
-      padding: 12px 40px 12px 15px; }
+      padding: 12px 40px 12px 15px;
+      min-height: 53px; }
       .menu-left_link:link {
         color: #fff; }
       .menu-left_link:visited {
@@ -3922,6 +3936,7 @@ pre {
   display: none; }
   @media screen and (min-width: 768px) {
     .menu-left_title {
+      display: block;
       background-color: #ab63c9;
       font-family: "fontbold";
       text-transform: uppercase;
@@ -4458,7 +4473,9 @@ pre {
         top: 50%;
         left: 9px;
         width: 14px;
-        height: 1px; }
+        height: 1px;
+        -webkit-transition: left, 0.2s;
+        transition: left, 0.2s; }
       .actions_move span:after {
         content: '';
         position: absolute;
@@ -4466,9 +4483,18 @@ pre {
         top: 50%;
         right: 9px;
         width: 14px;
-        height: 1px; } }
+        height: 1px;
+        -webkit-transition: right, 0.2s;
+        transition: right, 0.2s; } }
     .actions_item:hover .actions_move span {
       top: 0px; }
+  @media screen and (min-width: 1280px) {
+    .actions_move:hover span {
+      text-decoration: underline; }
+      .actions_move:hover span:before {
+        left: -30px; }
+      .actions_move:hover span:after {
+        right: -30px; } }
 
 @media screen and (min-width: 768px) {
   .order {
@@ -4729,9 +4755,9 @@ pre {
         max-width: 213px;
         margin: 0 auto;
         background: #a045c7;
-        background: -webkit-gradient(linear, left top, left bottom, from(#a861c6), to(#9945bc));
-        background: -webkit-linear-gradient(top, #a861c6 0%, #9945bc 100%);
-        background: linear-gradient(to bottom, #a861c6 0%, #9945bc 100%);
+        background: -webkit-gradient(linear, left top, left bottom, from(#a045c7), to(#8f25bd));
+        background: -webkit-linear-gradient(top, #a045c7 0%, #8f25bd 100%);
+        background: linear-gradient(to bottom, #a045c7 0%, #8f25bd 100%);
         -webkit-box-shadow: inset 0px 1px 1px 1px rgba(255, 255, 255, 0.29), 0px 2px 2px 0px rgba(0, 0, 0, 0.1);
         box-shadow: inset 0px 1px 1px 1px rgba(255, 255, 255, 0.29), 0px 2px 2px 0px rgba(0, 0, 0, 0.1);
         font-family: "fontbold";
@@ -4751,9 +4777,9 @@ pre {
         .block-order_button:hover {
           color: #ffffff; }
         .block-order_button:hover {
-          background: -webkit-gradient(linear, left top, left bottom, from(#9945bc), to(#a861c6));
-          background: -webkit-linear-gradient(top, #9945bc 0%, #a861c6 100%);
-          background: linear-gradient(to bottom, #9945bc 0%, #a861c6 100%); } }
+          background: -webkit-gradient(linear, left top, left bottom, from(#8f25bd), to(#a045c7));
+          background: -webkit-linear-gradient(top, #8f25bd 0%, #a045c7 100%);
+          background: linear-gradient(to bottom, #8f25bd 0%, #a045c7 100%); } }
 
 .price {
   margin-bottom: 90px; }
@@ -5084,11 +5110,12 @@ pre {
     .contacts_phone:before {
       content: '';
       position: absolute;
-      top: 0;
-      left: 0;
+      top: -2px;
+      left: 2px;
       width: 32px;
       height: 32px;
-      background: transparent url("../images/contacts-icons.png") -64px top no-repeat; }
+      background: transparent url("../images/phone.png") left top no-repeat;
+      background-size: contain; }
     .contacts_phone p {
       margin-bottom: 22px; }
   .contacts_email {
@@ -5098,10 +5125,11 @@ pre {
       content: '';
       position: absolute;
       top: 0;
-      left: 0;
+      left: 2px;
       width: 32px;
       height: 32px;
-      background: transparent url("../images/contacts-icons.png") -96px top no-repeat; }
+      background: transparent url("../images/mail.png") left top no-repeat;
+      background-size: contain; }
     .contacts_email p {
       margin-bottom: 22px; }
 

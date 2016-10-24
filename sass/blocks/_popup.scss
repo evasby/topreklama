@@ -1,27 +1,35 @@
-.block-order-calc{
-	background: transparent url('../images/block-order-calc-bac.jpg') right 50% no-repeat;
-	background-size: cover;
+.popup{
 	border: 1px solid #ddcbe4;
 	box-shadow: 0px 2px 24px 0px rgba(11,11,11,0.53);
-	margin-bottom: 15px;
-	&__contact{
-		background: transparent url('../images/block-order-calc-bac-contact.jpg') right 50% no-repeat;
-	}
-	@include m7{
-		margin-bottom: 65px;
+	max-width: 370px;
+	background: transparent url('../images/popup-bac.png') 50% 50% no-repeat;
+	background-size: 100% 100%;
+	&__callback{
+		max-width: 270px;
 	}
 	&_inner{
-		max-width: 372px;
+		padding-bottom: 13px;
 	}
 	&_title{
 		border-top: 30px solid #8929b1;
+		padding: 12px 0;
 		font-family: $fontBold;
-		font-size: 30px;
-		color: #ab63c9;
+		font-size: 19px;
+		color: #9126be;
 		background-color: #f4f4f4;
 		text-align: center;
 		text-transform: uppercase;
 		margin-bottom: 30px;
+	}
+	&_title1{
+		font-family: fontmyriadbold;
+		font-size: 30px;
+		color: #9126be;
+		margin-bottom: 5px;
+	}
+	&_title2{
+		font-size: 20px;
+		color: #9126be;
 	}
 	&_input{
 		max-width: 219px;
@@ -93,7 +101,7 @@
 	&_submit{
 		float: left;
 		width: 60%;
-		padding-right: 40px;
+		padding-right: 38px;
 		.popup__callback &{
 			padding: 0;
 			float: none;
@@ -176,8 +184,7 @@
 		background-color: #922bbd;
 		border-top: 4px solid #eeeeee;
 		border-bottom: 4px solid #eeeeee;
-		padding: 6px 10px 10px;
-		margin-bottom: 13px;
+		padding: 6px 15px 10px;
 	}
 	&_note{
 		p{
