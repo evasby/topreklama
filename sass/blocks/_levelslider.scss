@@ -10,8 +10,11 @@
 	}
 	&>.bx-wrapper{
 		margin-bottom: 15px;
+		max-height: 426px;
+		overflow: hidden;
+		box-shadow: 2px 2px 2px 0px rgba(79,79,79,0.38);
 		&>.bx-viewport{
-			box-shadow: 2px 2px 2px 0px rgba(79,79,79,0.38);
+			
 		}
 	}
 	&_inner{

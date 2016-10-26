@@ -1,83 +1,206 @@
+.bx_soc_comments_div{
+	display: none;
+	@include m7{
+		display: block;
+		padding-top: 70px;
+		h2{
+			font-family: $fontBold;
+			font-size: 24px;
+			text-align: center;
+			text-transform: uppercase;
+			margin-bottom: 34px;
+		}
+		.bx-catalog-tab-list{
+			margin: 16px 0 26px;
+		}
+		.bx-catalog-tab-list li{
+			background: #A862C7;
+			&:hover{
+				background: #912BBB;
+			}
+			&.active:hover{
+				background: #fff;
+			}
+			span{
+				color: #fff;
+			}
+		}
+	}	
+}
 .khayr_main_comment{
-	padding-top: 70px;
-	h2{
-		font-family: $fontBold;
-		font-size: 24px;
-		text-align: center;
-		text-transform: uppercase;
-		margin-bottom: 34px;
-	}
-	&_title{
-		font-family: $fontBold;
-		font-size: 24px;
-		color: #ab63c9;
-		height: 42px;
-		line-height: 42px;
-		background-color: #fff;
-		text-transform: uppercase;
-		padding: 0 0 0 46px;
-		position: relative;
-		&:before{
-			content: '';
-			position: absolute;
-			left: 0;
-			top: -24px;
-			width: 309px;
-			height: 24px;
-			background-color: #912bbb;
-		}
-		&:after{
-			content: '';
-			position: absolute;
-			left: 309px;
-			top: -24px;
-			width: 4px;
-			height: 24px;
+	display: none;
+	@include m7{
+		display: block;
+		&_title{
+			font-family: $fontBold;
+			font-size: 24px;
+			color: #ab63c9;
+			height: 42px;
+			line-height: 42px;
 			background-color: #fff;
+			text-transform: uppercase;
+			padding: 0 0 0 46px;
+			position: relative;
+			&:before{
+				content: '';
+				position: absolute;
+				left: 0;
+				top: -24px;
+				width: 309px;
+				height: 24px;
+				background-color: #912bbb;
+			}
+			&:after{
+				content: '';
+				position: absolute;
+				left: 309px;
+				top: -24px;
+				width: 4px;
+				height: 24px;
+				background-color: #fff;
+			}
 		}
-	}
-	.comments{
-		.stock{
-			padding: 10px 15px;
-			background: transparent url('../images/comment-bac.png') left top no-repeat;
-			background-size: 100% 100%;
-			margin-bottom: 44px;
-			box-shadow: 2px 2px 2px 0px rgba(11,11,11,0.38);
-			.userInfo{
-				font-family: $fontMyriadRegular;
-				font-size: 24px;
-				color: #2b2b2b;
-				background: none;
-				position: relative;
-				height: 25px;
+		.comments{
+			.stock{
+				padding: 10px 15px;
+				background: transparent url('../images/comment-bac.png') left top no-repeat;
+				background-size: 100% 100%;
+				margin-bottom: 44px;
+				box-shadow: 2px 2px 2px 0px rgba(11,11,11,0.38);
+				.userInfo{
+					font-family: $fontMyriadRegular;
+					font-size: 24px;
+					color: #2b2b2b;
+					background: none;
+					position: relative;
+					height: 25px;
+					margin-bottom: 15px;
+					&:before{
+						content: '';
+						position: absolute;
+						left: 0;
+						bottom: 0;
+						width: 67px;
+						height: 2px;
+						background-color: #ab63c9;
+					}
+				}
+				.userText{
+					margin: 0;
+					p{
+						margin-bottom: 20px;
+					}
+				}
+			}
+		}
+		.form{
+			border: 1px solid #ddcbe4;
+			background: none;
+			background: #a661c4;
+	    background: linear-gradient(to right, #a661c4 0%, #aa63c9 100%);
+	    margin: 0 0 52px;
+	    padding: 24px 0 0;
+	    box-shadow: 0px 2px 24px 0px rgba(11,11,11,0.53);
+	    form{
+	    	background-color: transparent;
+	    	@include clearfix;
+	    	padding: 21px 34px 28px;
+	    	input{
+					width: 100%;
+					border: none;
+					margin: 0;
+					border: 1px solid #c6aecf;
+					width: 100%;	
+					height: 25px;
+					padding: 0 10px 1px 34px;
+				}
+				textarea{
+					border: 1px solid #c6aecf;
+					width: 100%;
+					margin: 0;
+					display: block;
+					box-shadow: -1px -1px 0px 0px rgba(131,60,159,1);
+					height: 65px;
+					text-align: left;
+					padding: 5px 10px;
+					position: relative;
+					z-index: 1;
+					font-family: $fontLight;
+				  color: #444444;
+				  font-size: 13px;
+				  font-style: normal;
+				}
+	    }
+		}
+
+		&_left{
+			float: left;
+			width: 23.99%;
+			margin: 0 1.63%;
+		}
+		&_center{
+			float: left;
+			width: 54.02%;
+			margin: 0 1.63%;
+		}
+		&_submit{
+			float: left;
+			width: 15.45%;
+			padding: 0 11px!important;
+			input{
+				font-size: 11px!important;
+				font-family: $fontBold!important;
+				width: 100%!important;
+				display: block!important;
+				background: #262626!important;
+				background: linear-gradient(to bottom, #262626 0%, #000000 100%)!important;
+				box-shadow: inset 0px 1px 1px 0px rgba(255,255,255,0.29), 0px 2px 2px 0px rgba(11,11,11,0.1)!important;
+				border: 1px solid #0d1117!important;
+				font-family: $fontBold!important;
+				color: #fff!important;
+				font-size: 14px!important;
+				line-height: 30px!important;
+				text-transform: uppercase!important;
+				text-decoration: none!important;
+				text-align: center!important;
+				height: 30px!important;
+				padding: 0!important;
+				&:hover{
+					background: linear-gradient(to bottom, #000000 0%, #262626 100%)!important;
+					cursor: pointer!important;
+					color: #fff!important;
+				}
+			}
+		}
+		&_input{
+			position: relative;
+			box-shadow: -1px -1px 0px 0px rgba(131,60,159,1);
+			&__name{
+				margin-bottom: 15px;
 				&:before{
 					content: '';
 					position: absolute;
-					left: 0;
-					bottom: 0;
-					width: 67px;
-					height: 2px;
-					background-color: #ab63c9;
+					width: 17px;
+					height: 17px;
+					top: 5px;
+					left: 7px;
+					display: block;
+					background: transparent url('../images/block-order-calc-icons.png') left top no-repeat;
 				}
 			}
-			.userText{
-				margin: 0;
-				p{
-					margin-bottom: 20px;
+			&__email{
+				&:before{
+					content: '';
+					position: absolute;
+					width: 17px;
+					height: 17px;
+					top: 5px;
+					left: 7px;
+					display: block;
+					background: transparent url('../images/block-order-calc-icons.png') -17px top no-repeat;
 				}
 			}
 		}
-	}
-	.form{
-		border: 1px solid #ddcbe4;
-		background: none;
-		background: #a661c4;
-    background: linear-gradient(to right, #a661c4 0%, #aa63c9 100%);
-    margin: 0 0 52px;
-    padding: 24px 0 0;
-    box-shadow: 0px 2px 24px 0px rgba(11,11,11,0.53);
-    form{
-    	background-color: transparent;
-    }
+
 	}
 }

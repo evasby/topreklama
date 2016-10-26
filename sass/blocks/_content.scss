@@ -53,5 +53,34 @@
 				margin-bottom: 36px;
 			}
 		}
+		b{
+			font-family: $fontBold;
+		}
+		i, em{
+			font-style: italic;
+		}
+		u{
+			text-decoration: underline;
+		}
+		h2{
+			font-family: $fontBold;
+			font-size: 20px;
+			line-height: 20px;
+			p{
+				font-family: $fontBold;
+				font-size: 20px;
+				line-height: 20px;
+			}
+		}
+		h3, h4{
+			font-family: $fontBold;
+			font-size: 16px;
+			line-height: 16px;
+			p{
+				font-family: $fontBold;
+				font-size: 16px;
+				line-height: 16px;
+			}
+		}
 	}
 }

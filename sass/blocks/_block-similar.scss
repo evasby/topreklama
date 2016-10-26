@@ -1,14 +1,14 @@
 .block-similar{
-	overflow: hidden;
 	@include m7{
 		padding: 0px 0 30px;
 	}
-	&_title{
+	h2{
 		text-align: center;
 		font-family: $fontBold;
 		color: #ab63c9;
 		font-size: 24px;
 		margin-bottom: 20px;
+		overflow: hidden;
 		@include m7{
 			margin-bottom: 38px;
 			font-size: 30px;
