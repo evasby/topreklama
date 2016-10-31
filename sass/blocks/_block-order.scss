@@ -1,6 +1,7 @@
 .block-order{
 	display: none;
 	@include m7{
+		line-height: 1;
 		display: block;
 		padding: 41px 12px 45px;
 		margin-bottom: 87px;

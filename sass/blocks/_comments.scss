@@ -1,9 +1,10 @@
 .bx_soc_comments_div{
 	display: none;
 	@include m7{
-		display: block;
-		padding-top: 70px;
+		line-height: 1;
+		display: block;	
 		h2{
+			padding-top: 70px;
 			font-family: $fontBold;
 			font-size: 24px;
 			text-align: center;
@@ -26,6 +27,12 @@
 			}
 		}
 	}	
+}
+.khayr_main_comment_err_exp,
+.khayr_main_comment_suc_exp{
+	@include m7{
+		height: 37px;
+	}
 }
 .khayr_main_comment{
 	display: none;

@@ -10,6 +10,7 @@
 	position: relative;
 	box-shadow: 3px 3px 26px 0px rgba(45,45,45,0.23);
 	margin-bottom: 30px;
+	line-height: 1;
 	@include m7{
 		margin-bottom: 58px;
 		.element &{
