@@ -186,9 +186,6 @@ pre {
   color: #444444;
   font-size: 13px; }
 
-.hide {
-  display: none; }
-
 /*!
  * animate.css -http://daneden.me/animate
  * Version - 3.5.0
@@ -3198,18 +3195,29 @@ pre {
 
 .header {
   background-color: #e9e9e9;
-  padding: 50px 0;
-  overflow: hidden; }
+  overflow: hidden;
+  padding-bottom: 1px; }
   @media screen and (min-width: 768px) {
     .header {
-      padding: 31px 0 1px; }
-      .header:before, .header:after {
-        content: ".";
-        display: block;
-        height: 0;
-        overflow: hidden; }
-      .header:after {
-        clear: both; } }
+      padding: 160px 0 1px; } }
+  .header_fix {
+    padding: 50px 0; }
+    @media screen and (min-width: 768px) {
+      .header_fix {
+        padding: 31px 0 0;
+        position: fixed;
+        background-color: #E9E9E9;
+        z-index: 12;
+        top: 0;
+        left: 0;
+        width: 100%; }
+        .header_fix:before, .header_fix:after {
+          content: ".";
+          display: block;
+          height: 0;
+          overflow: hidden; }
+        .header_fix:after {
+          clear: both; } }
   .header_item {
     max-width: 268px;
     margin: 0 auto; }
@@ -3278,6 +3286,7 @@ pre {
     height: auto; }
 
 .block-square {
+  font-family: "fontbold";
   background: transparent url("../images/block-square.png") left top no-repeat;
   background-size: contain;
   margin-bottom: 15px;
@@ -3291,8 +3300,7 @@ pre {
     display: none; }
     @media screen and (min-width: 768px) {
       .block-square__address {
-        display: block;
-        color: #000; } }
+        display: block; } }
   .block-square__callback {
     display: none; }
     @media screen and (min-width: 768px) {
@@ -3579,6 +3587,71 @@ pre {
     .slider .next:hover:hover {
       opacity: 1; }
 
+.slider-buttons {
+  text-align: center;
+  position: absolute;
+  width: 100%; }
+  .slider-buttons_popup1 {
+    font-size: 14px;
+    display: inline-block;
+    border: 1px solid #0d1117;
+    border-radius: 5px;
+    -webkit-box-shadow: inset 0px 1px 0px 0px #bb7bd7;
+    box-shadow: inset 0px 1px 0px 0px #bb7bd7;
+    line-height: 50px;
+    text-align: center;
+    width: 300px;
+    margin-right: 15px;
+    color: #fff;
+    text-decoration: none;
+    font-family: "fontbold";
+    background: #a045c7;
+    background: -webkit-gradient(linear, left top, left bottom, from(#a045c7), to(#8f25bd));
+    background: -webkit-linear-gradient(top, #a045c7 0%, #8f25bd 100%);
+    background: linear-gradient(to bottom, #a045c7 0%, #8f25bd 100%); }
+    .slider-buttons_popup1:link {
+      color: #fff; }
+    .slider-buttons_popup1:visited {
+      color: #fff; }
+    .slider-buttons_popup1:active {
+      color: #fff; }
+    .slider-buttons_popup1:hover {
+      color: #fff; }
+    .slider-buttons_popup1:hover {
+      background: -webkit-gradient(linear, left top, left bottom, from(#8f25bd), to(#a045c7));
+      background: -webkit-linear-gradient(top, #8f25bd 0%, #a045c7 100%);
+      background: linear-gradient(to bottom, #8f25bd 0%, #a045c7 100%); }
+  .slider-buttons_popup2 {
+    font-size: 14px;
+    display: inline-block;
+    border: 1px solid #0d1117;
+    border-radius: 5px;
+    -webkit-box-shadow: inset 0px 1px 0px 0px #707070;
+    box-shadow: inset 0px 1px 0px 0px #707070;
+    line-height: 50px;
+    text-align: center;
+    width: 300px;
+    margin-left: 15px;
+    color: #fff;
+    text-decoration: none;
+    font-family: "fontbold";
+    background: #353535;
+    background: -webkit-gradient(linear, left top, left bottom, from(#353535), to(#141414));
+    background: -webkit-linear-gradient(top, #353535 0%, #141414 100%);
+    background: linear-gradient(to bottom, #353535 0%, #141414 100%); }
+    .slider-buttons_popup2:link {
+      color: #fff; }
+    .slider-buttons_popup2:visited {
+      color: #fff; }
+    .slider-buttons_popup2:active {
+      color: #fff; }
+    .slider-buttons_popup2:hover {
+      color: #fff; }
+    .slider-buttons_popup2:hover {
+      background: -webkit-gradient(linear, left top, left bottom, from(#141414), to(#353535));
+      background: -webkit-linear-gradient(top, #141414 0%, #353535 100%);
+      background: linear-gradient(to bottom, #141414 0%, #353535 100%); }
+
 .page-head {
   display: none; }
   @media screen and (min-width: 768px) {
@@ -3655,7 +3728,9 @@ pre {
         clear: both; }
       .container-front_left {
         float: left;
-        width: 23.08%; }
+        width: 23.08%;
+        position: relative;
+        height: 100%; }
       .container-front_center {
         float: left;
         width: 53.84%;
@@ -4049,7 +4124,14 @@ pre {
   @media screen and (min-width: 768px) {
     .actions-block {
       margin: 0;
-      text-align: center; } }
+      text-align: center;
+      /*&__hide{
+			opacity: 
+		}*/ }
+      .actions-block__fix {
+        position: fixed;
+        top: 180px;
+        z-index: 12; } }
   .actions-block_head {
     background-color: #ab63c9;
     font-family: "fontbold";
@@ -4099,6 +4181,9 @@ pre {
     text-transform: uppercase;
     padding: 10px 15px;
     line-height: 25px; }
+    .actions-block_title p {
+      line-height: 25px !important;
+      margin-bottom: 0 !important; }
   .actions-block_descr {
     background-color: #ab63c9;
     font-family: "fontbold";
@@ -4881,6 +4966,10 @@ pre {
     text-align: center;
     text-transform: uppercase;
     margin-bottom: 30px; }
+    .block-order-calc_title__front {
+      padding: 12px 0;
+      font-size: 19px;
+      color: #9126be; }
   .block-order-calc_input {
     max-width: 219px;
     margin: 0 auto 17px auto;
@@ -6737,4 +6826,27 @@ pre {
   box-shadow: inset -19px 0px 0px 0px #bc48ff;
   padding: 5px 5px 5px 7px;
   border-top-left-radius: 4px;
-  border-bottom-left-radius: 4px; }
+  border-bottom-left-radius: 4px;
+  right: 0 !important; }
+
+.hide {
+  display: none; }
+
+.manager-popup {
+  background-color: #e9e9e9;
+  padding: 27px 0 13px;
+  width: 270px;
+  text-align: center; }
+  .manager-popup_img {
+    padding: 0 30px;
+    margin-bottom: 20px; }
+  .manager-popup_name {
+    font-family: "fontbold";
+    text-transform: uppercase;
+    margin-bottom: 7px; }
+  .manager-popup_phone {
+    background-color: #ab63c9;
+    color: #fff;
+    font-family: "fontbold";
+    font-size: 22px;
+    line-height: 45px; }

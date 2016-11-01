@@ -1,4 +1,6 @@
 .block-square{
+	font-family: $fontBold;
+	//color: #000;
 	//max-height: 85px;
 	background: transparent url('../images/block-square.png') left top no-repeat;
 	background-size: contain;
@@ -13,8 +15,7 @@
 	&__address{
 		display: none;
 		@include m7{
-			display: block;
-			color: #000;
+			display: block;		
 		}
 	}
 	&__callback{

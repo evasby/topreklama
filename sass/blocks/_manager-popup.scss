@@ -1,0 +1,22 @@
+.manager-popup{
+	background-color: #e9e9e9;
+	padding: 27px 0 13px;
+	width: 270px;
+	text-align: center;
+	&_img{
+		padding: 0 30px;
+		margin-bottom: 20px;
+	}
+	&_name{
+		font-family: $fontBold;
+		text-transform: uppercase;
+		margin-bottom: 7px;
+	}
+	&_phone{
+		background-color: #ab63c9;
+		color: #fff;
+		font-family: $fontBold;
+		font-size: 22px;
+		line-height: 45px;
+	}
+}

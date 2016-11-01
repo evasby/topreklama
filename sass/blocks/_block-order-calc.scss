@@ -23,6 +23,11 @@
 		text-align: center;
 		text-transform: uppercase;
 		margin-bottom: 30px;
+		&__front{
+			padding: 12px 0;
+			font-size: 19px;
+			color: #9126be;
+		}
 	}
 	&_input{
 		max-width: 219px;

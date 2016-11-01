@@ -4,6 +4,14 @@
 	@include m7{
 		margin: 0;
 		text-align: center;
+		&__fix{
+			position: fixed;
+			top: 180px;
+			z-index: 12;
+		}
+		/*&__hide{
+			opacity: 
+		}*/
 	}
 	&_head{
 		background-color: #ab63c9;
@@ -62,6 +70,10 @@
 		text-transform: uppercase;
 		padding: 10px 15px;
 		line-height: 25px;
+		p{
+			line-height: 25px!important;
+			margin-bottom: 0!important;
+		}
 	}
 	&_descr{
 		background-color: #ab63c9;
