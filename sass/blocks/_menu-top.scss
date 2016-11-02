@@ -49,6 +49,9 @@
 		font-size: 16px;
 		text-decoration: none;
 		text-transform: uppercase;
+		&__selected{
+			@include link(#d777ff, #d777ff);
+		}
 	}
 	&_mobile{
 		position: fixed;
