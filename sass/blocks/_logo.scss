@@ -11,4 +11,9 @@
 		width: 100%;
 		height: auto;
 	}
+	@include m7{
+		&__fix{
+			margin-bottom: 10px;
+		}
+	}
 }

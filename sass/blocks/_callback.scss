@@ -1,12 +1,11 @@
-.up{
+.callback{
 	width: 50px;
 	height: 50px;
-	display: none;
 	position: fixed;
 	z-index: 9999;
 	bottom: 35px;
-	right: 20px;
-	background: transparent url('../images/up-arrow.png') left top no-repeat;
+	left: 20px;
+	background: transparent url('../images/callback.png') left top no-repeat;
 	background-size: contain;
 	cursor: pointer;
 	opacity: 0.5;
@@ -14,13 +13,8 @@
 	&:hover{
 		opacity: 1;
 	}
-	&__on{
-		display: block;
-	}
 	@include m7{
-		//width: 94px;
-		//height: 94px;
 		bottom: 55px;
-		right: 52px;
+		left: 52px;
 	}
 }

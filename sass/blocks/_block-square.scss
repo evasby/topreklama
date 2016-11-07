@@ -34,5 +34,8 @@
 	}
 	@include m7{
 		margin-left: 39px;
+		&__fix{
+			margin-bottom: 10px;
+		}
 	}
 }

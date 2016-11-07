@@ -8,6 +8,9 @@
 		margin: -13px 2px 6px 0;
 		float: right;
 		width: 100%;
+		&__fix{
+			margin: 7px 2px 6px 0;
+		}
 	}
 	&_item{
 		font-size: 16px;
@@ -31,12 +34,25 @@
 			color: #9a38c3;
 			border-top: 1px solid #9a38c3;
 			padding: 4px 0 0 30px;
+			.block-info__fix &{
+				border: none;
+				height: 36px;
+				line-height: 36px;
+				padding: 0 0 0 30px;
+				p{				
+					height: 36px;
+					line-height: 36px;
+				}
+			}
 			&:before{
 				background-position: -15px -3px;
 				width: 15px;
 				height: 15px;
 				top: 5px;
 				left: 14px;
+				.block-info__fix &{
+					top: 10px;
+				}
 			}
 		}
 		&__address{

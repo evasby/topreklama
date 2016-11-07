@@ -1,17 +1,21 @@
 .actions-block{
-	margin: 15px 0 15px;
-	text-align: center;
+	/*margin: 15px 0 15px;
+	text-align: center;*/
+	display: none;
 	@include m7{
+		display: block;
 		margin: 0;
 		text-align: center;
-		&__fix{
-			position: fixed;
-			top: 180px;
-			z-index: 12;
+	}
+	&__mobile{
+		margin: 15px 0 15px;
+		text-align: center;
+		.actions-block{
+			display: block;
 		}
-		/*&__hide{
-			opacity: 
-		}*/
+		@include m7{	
+			display: none;		
+		}
 	}
 	&_head{
 		background-color: #ab63c9;

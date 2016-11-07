@@ -1,5 +1,8 @@
 .container-front{
 	overflow: hidden;
+	&_center{
+		padding: 15px 0 00;
+	}
 	@include m7{
 		@include clearfix;
 		padding: 36px 0 50px;

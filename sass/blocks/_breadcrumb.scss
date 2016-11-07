@@ -13,6 +13,7 @@
 				text-decoration: none;
 				font-family: $fontRegular;
 				font-size: 12px;
+				line-height: 17px;
 				margin-right: 3px;
 				&:hover{
 					text-decoration: underline;
@@ -22,6 +23,11 @@
 				color: #000;
 				font-family: $fontRegular;
 				font-size: 12px;
+				line-height: 17px;
+			}
+			&>span{
+				position: relative;
+				top: -1px;
 			}
 			i{
 				display: inline-block;

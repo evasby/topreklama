@@ -1,5 +1,5 @@
 .menu-cat{
-	margin-bottom: 38px;
+	margin-bottom: 15px;
 	@include m7{
 		@include clearfix;
 	}
@@ -9,24 +9,24 @@
 		}	
 	}
 	&_item{
-		min-height: 91px;
-		margin-bottom: 15px;
+		min-height: 85px;
+		margin-bottom: 0;
 		@include m7{
 			float: left;
 			width: 33.33%;
 			//text-align: right;
-			margin-bottom: 33px;
+			margin-bottom: 0px;
 		}
 	}
 	&_link{
 		display: inline-block;
-		padding: 23px 0 2px 29px;
+		padding: 23px 0 2px 22px;
 		position: relative;
 		@include link(#000, #000);
 		text-decoration: none;
 		font-family: $fontBold;
-		font-size: 21px;
-		line-height: 22px;
+		font-size: 14px;
+		line-height: 5px;
 		text-transform: uppercase;
 		&:before{
 			content: '';
@@ -35,8 +35,8 @@
 			top: 0;
 			left: 0;
 			height: 100%;
-			width: 64px;
-			border: 12px solid #ab63c9;
+			width: 50px;
+			border: 8px solid #ab63c9;
 		}
 		&:hover{
 			&:before{

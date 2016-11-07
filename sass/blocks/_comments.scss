@@ -4,12 +4,12 @@
 		line-height: 1;
 		display: block;	
 		h2{
-			padding-top: 70px;
+			padding-top: 55px;
 			font-family: $fontBold;
 			font-size: 24px;
 			text-align: center;
 			text-transform: uppercase;
-			margin-bottom: 34px;
+			margin-bottom: 30px;
 		}
 		.bx-catalog-tab-list{
 			margin: 16px 0 26px;
@@ -38,6 +38,9 @@
 	display: none;
 	@include m7{
 		display: block;
+		.stock{
+			@include clearfix;
+		}
 		&_title{
 			font-family: $fontBold;
 			font-size: 24px;
@@ -67,6 +70,7 @@
 				background-color: #fff;
 			}
 		}
+
 		.comments{
 			.stock{
 				padding: 10px 15px;
@@ -80,8 +84,8 @@
 					color: #2b2b2b;
 					background: none;
 					position: relative;
-					height: 25px;
-					margin-bottom: 15px;
+					height: auto;
+					padding-bottom: 10px;
 					&:before{
 						content: '';
 						position: absolute;
@@ -92,10 +96,26 @@
 						background-color: #ab63c9;
 					}
 				}
-				.userText{
+				.userImage{
+					float: left;
+				}
+				.userRight{
+					overflow: hidden;
+					padding: 16px 20px 0 20px;
+				}
+				.userDescr{
+					font-size: 12px;
+					padding-top: 10px;
+				}
+				.usertext{
 					margin: 0;
+					font-size: 14px!important;
+					line-height: 14px!important;
+					padding-top: 7px;
 					p{
-						margin-bottom: 20px;
+						margin: 0!important;
+						font-size: 14px!important;
+						line-height: 14px!important;
 					}
 				}
 			}

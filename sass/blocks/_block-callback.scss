@@ -17,6 +17,17 @@
 			margin-bottom: 98px;
 		}
 	}
+	&__front{
+		display: none;
+		@include m7{
+			display: block;
+		}
+	}
+	&__mobile{
+		@include m7{
+			display: none;
+		}
+	}
 	&_title{
 		text-align: center;
 		font-family: $fontBold;
