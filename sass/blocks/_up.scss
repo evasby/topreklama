@@ -9,10 +9,10 @@
 	background: transparent url('../images/up-arrow.png') left top no-repeat;
 	background-size: contain;
 	cursor: pointer;
-	opacity: 0.5;
+	opacity: 1;
 	transition: opacity, 0.2s;
 	&:hover{
-		opacity: 1;
+		opacity: 0.5;
 	}
 	&__on{
 		display: block;

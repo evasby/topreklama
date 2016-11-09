@@ -3758,7 +3758,7 @@ pre {
 .container-front {
   overflow: hidden; }
   .container-front_center {
-    padding: 15px 0 00; }
+    padding: 15px 0 0; }
   @media screen and (min-width: 980px) {
     .container-front {
       padding: 36px 0 50px; }
@@ -3783,7 +3783,7 @@ pre {
         width: 23.08%; } }
 
 .container_center {
-  padding: 15px 0 0 30px; }
+  padding: 15px 0 0; }
 
 @media screen and (min-width: 980px) {
   .container {
@@ -4384,14 +4384,20 @@ pre {
     text-align: center;
     font-family: "fontbold";
     color: #ab63c9;
-    font-size: 24px;
+    font-size: 17px;
     text-transform: uppercase;
     margin-bottom: 6px; }
+    @media screen and (min-width: 480px) {
+      .block-callback_title {
+        font-size: 24px; } }
     .block-callback_title span {
       position: relative;
       display: inline-block;
-      height: 17px;
+      height: 9px;
       padding: 0 12px; }
+      @media screen and (min-width: 480px) {
+        .block-callback_title span {
+          height: 17px; } }
       .block-callback_title span:before {
         content: '';
         position: absolute;
@@ -4412,9 +4418,12 @@ pre {
         background-color: #ab63c9; }
   .block-callback_title2 {
     font-family: "fontbold";
-    font-size: 24px;
+    font-size: 20px;
     text-align: center;
     margin-bottom: 20px; }
+    @media screen and (min-width: 480px) {
+      .block-callback_title2 {
+        font-size: 24px; } }
   .block-callback_descr {
     border: 1px solid #2d2d2d;
     margin: 0 15px;
@@ -4796,7 +4805,7 @@ pre {
       width: 50px;
       border: 8px solid #ab63c9; }
     .menu-cat_link:hover:before {
-      border-color: #7f8080; }
+      border-color: #DDCBE4; }
     .menu-cat_link span {
       display: inline-block;
       padding: 8px 0 12px;
@@ -5158,7 +5167,7 @@ pre {
       margin: 0 auto;
       font-family: "fontbold";
       color: #ffffff;
-      font-size: 14px;
+      font-size: 11px;
       line-height: 36px;
       text-transform: uppercase;
       text-decoration: none;
@@ -5173,6 +5182,9 @@ pre {
         color: #ffffff; }
       .block-order-calc_submit input:hover {
         color: #ffffff; }
+      @media screen and (min-width: 480px) {
+        .block-order-calc_submit input {
+          font-size: 14px; } }
       .popup__callback .block-order-calc_submit input {
         height: 44px; }
       .block-order-calc_submit input:hover {
@@ -6758,11 +6770,11 @@ pre {
   background: transparent url("../images/up-arrow.png") left top no-repeat;
   background-size: contain;
   cursor: pointer;
-  opacity: 0.5;
+  opacity: 1;
   -webkit-transition: opacity, 0.2s;
   transition: opacity, 0.2s; }
   .up:hover {
-    opacity: 1; }
+    opacity: 0.5; }
   .up__on {
     display: block; }
   @media screen and (min-width: 980px) {
@@ -6771,24 +6783,105 @@ pre {
       right: 52px; } }
 
 .callback {
-  width: 50px;
-  height: 50px;
+  width: 70px;
+  height: 70px;
   position: fixed;
   z-index: 9999;
   bottom: 35px;
   left: 20px;
-  background: transparent url("../images/callback.png") left top no-repeat;
-  background-size: contain;
   cursor: pointer;
-  opacity: 0.5;
-  -webkit-transition: opacity, 0.2s;
-  transition: opacity, 0.2s; }
+  border-radius: 50% !important;
+  background-clip: padding-box;
+  background-color: #AB63C9;
+  opacity: 0.9;
+  -webkit-animation: uptocallmini 1.5s 0s ease-out infinite;
+  animation: uptocallmini 1.5s 0s ease-out infinite; }
+  .callback:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-image: url("../images/callback2.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    -webkit-animation: uptocallphone 1.5s linear infinite;
+    animation: uptocallphone 1.5s linear infinite; }
   .callback:hover {
-    opacity: 1; }
+    outline: none; }
+  .callback:focus {
+    outline: none; }
   @media screen and (min-width: 980px) {
     .callback {
       bottom: 55px;
       left: 52px; } }
+
+@-webkit-keyframes uptocallphone {
+  0% {
+    -ms-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  25% {
+    -ms-transform: rotate(30deg);
+    -webkit-transform: rotate(30deg);
+    transform: rotate(30deg); }
+  50% {
+    -ms-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  75% {
+    -ms-transform: rotate(-30deg);
+    -webkit-transform: rotate(-30deg);
+    transform: rotate(-30deg); }
+  100% {
+    -ms-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg); } }
+
+@keyframes uptocallphone {
+  0% {
+    -ms-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  25% {
+    -ms-transform: rotate(30deg);
+    -webkit-transform: rotate(30deg);
+    transform: rotate(30deg); }
+  50% {
+    -ms-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  75% {
+    -ms-transform: rotate(-30deg);
+    -webkit-transform: rotate(-30deg);
+    transform: rotate(-30deg); }
+  100% {
+    -ms-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg); } }
+
+@-webkit-keyframes uptocallmini {
+  0% {
+    -webkit-box-shadow: 0 0 8px 6px rgba(255, 48, 48, 0), 0 0 0px 0px transparent, 0 0 0px 0px rgba(255, 48, 48, 0);
+    box-shadow: 0 0 8px 6px rgba(255, 48, 48, 0), 0 0 0px 0px transparent, 0 0 0px 0px rgba(255, 48, 48, 0); }
+  10% {
+    -webkit-box-shadow: 0 0 8px 6px #AB63C9, 0 0 12px 10px transparent, 0 0 12px 14px #AB63C9;
+    box-shadow: 0 0 8px 6px #AB63C9, 0 0 12px 10px transparent, 0 0 12px 14px #AB63C9; }
+  100% {
+    -webkit-box-shadow: 0 0 8px 6px rgba(255, 48, 48, 0), 0 0 0px 40px transparent, 0 0 0px 40px rgba(255, 48, 48, 0);
+    box-shadow: 0 0 8px 6px rgba(255, 48, 48, 0), 0 0 0px 40px transparent, 0 0 0px 40px rgba(255, 48, 48, 0); } }
+
+@keyframes uptocallmini {
+  0% {
+    -webkit-box-shadow: 0 0 8px 6px rgba(255, 48, 48, 0), 0 0 0px 0px transparent, 0 0 0px 0px rgba(255, 48, 48, 0);
+    box-shadow: 0 0 8px 6px rgba(255, 48, 48, 0), 0 0 0px 0px transparent, 0 0 0px 0px rgba(255, 48, 48, 0); }
+  10% {
+    -webkit-box-shadow: 0 0 8px 6px #AB63C9, 0 0 12px 10px transparent, 0 0 12px 14px #AB63C9;
+    box-shadow: 0 0 8px 6px #AB63C9, 0 0 12px 10px transparent, 0 0 12px 14px #AB63C9; }
+  100% {
+    -webkit-box-shadow: 0 0 8px 6px rgba(255, 48, 48, 0), 0 0 0px 40px transparent, 0 0 0px 40px rgba(255, 48, 48, 0);
+    box-shadow: 0 0 8px 6px rgba(255, 48, 48, 0), 0 0 0px 40px transparent, 0 0 0px 40px rgba(255, 48, 48, 0); } }
 
 .popup {
   border: 1px solid #ddcbe4;
@@ -6799,6 +6892,8 @@ pre {
   background-size: 100% 100%; }
   .popup__callback {
     max-width: 270px; }
+  .popup__girl {
+    max-width: 300px; }
   .popup_inner {
     padding-bottom: 13px; }
   .popup_title {
@@ -6811,6 +6906,8 @@ pre {
     text-align: center;
     text-transform: uppercase;
     margin-bottom: 30px; }
+    .popup__girl .popup_title {
+      padding: 5px 15px 10px; }
   .popup_title1 {
     font-family: fontmyriadbold;
     font-size: 30px;
@@ -6825,6 +6922,10 @@ pre {
     position: relative;
     -webkit-box-shadow: -1px -1px 0px 0px #833c9f;
     box-shadow: -1px -1px 0px 0px #833c9f; }
+    .popup__girl .popup_input {
+      margin: 0;
+      float: right;
+      max-width: 182px; }
     .popup_input__name:before {
       content: '';
       position: absolute;
@@ -6881,6 +6982,9 @@ pre {
       overflow: hidden; }
     .popup_bottom:after {
       clear: both; }
+    .popup__girl .popup_bottom {
+      margin: 0;
+      padding: 16px 0; }
   .popup_submit {
     float: left;
     width: 60%;
@@ -6973,6 +7077,17 @@ pre {
     padding-top: 8px; }
     .popup_note p .notetext {
       color: #f1e4f7; }
+  .popup_photo {
+    padding: 50px 15px;
+    background: #fff url("../images/popup-girl.jpg") left top no-repeat;
+    background-size: auto 100%; }
+    .popup_photo:before, .popup_photo:after {
+      content: ".";
+      display: block;
+      height: 0;
+      overflow: hidden; }
+    .popup_photo:after {
+      clear: both; }
 
 .uptolike-buttons .uptl_container-fixed-right {
   top: 270px !important;

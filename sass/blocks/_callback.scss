@@ -1,20 +1,89 @@
 .callback{
-	width: 50px;
-	height: 50px;
+	width: 70px;
+	height: 70px;
 	position: fixed;
 	z-index: 9999;
 	bottom: 35px;
 	left: 20px;
-	background: transparent url('../images/callback.png') left top no-repeat;
-	background-size: contain;
+	//background: transparent url('../images/callback.png') left top no-repeat;
+	//background-size: contain;
 	cursor: pointer;
-	opacity: 0.5;
-	transition: opacity, 0.2s;
+	//opacity: 0.5;
+	//transition: opacity, 0.2s;
+
+
+	border-radius:50% !important;
+	background-clip:padding-box;
+	//background-color:rgba(201, 8, 8, .9);
+	background-color: #AB63C9;
+	opacity: 0.9;
+	animation: uptocallmini 1.5s 0s ease-out infinite;
+
+
+	&:before{
+		content: "";
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top:0;
+		left:0;
+		//background-image:url(http://snb.by/img/u201-17-fs.png);
+		background-image:url('../images/callback2.png');
+		background-repeat:no-repeat;
+		background-position:center center;
+		animation: uptocallphone 1.5s linear infinite;
+	}
+
 	&:hover{
-		opacity: 1;
+		//opacity: 1;
+		outline: none;
+	}
+	&:focus{
+		outline: none;
 	}
 	@include m7{
 		bottom: 55px;
 		left: 52px;
 	}
+
+
+
+
+
+}
+@-webkit-keyframes uptocallphone {
+0% {-ms-transform:rotate(0deg);-webkit-transform:rotate(0deg);transform:rotate(0deg);}
+25% {-ms-transform:rotate(30deg);-webkit-transform:rotate(30deg);transform:rotate(30deg);}
+50% {-ms-transform:rotate(0deg);-webkit-transform:rotate(0deg);transform:rotate(0deg);}
+75% {-ms-transform:rotate(-30deg);-webkit-transform:rotate(-30deg);transform:rotate(-30deg);}
+100% {-ms-transform:rotate(0deg);-webkit-transform:rotate(0deg);transform:rotate(0deg);}
+}
+@-moz-keyframes uptocallphone {
+0% {-ms-transform:rotate(0deg);-webkit-transform:rotate(0deg);transform:rotate(0deg);}
+25% {-ms-transform:rotate(30deg);-webkit-transform:rotate(30deg);transform:rotate(30deg);}
+50% {-ms-transform:rotate(0deg);-webkit-transform:rotate(0deg);transform:rotate(0deg);}
+75% {-ms-transform:rotate(-30deg);-webkit-transform:rotate(-30deg);transform:rotate(-30deg);}
+100% {-ms-transform:rotate(0deg);-webkit-transform:rotate(0deg);transform:rotate(0deg);}
+}
+@keyframes uptocallphone {
+0% {-ms-transform:rotate(0deg);-webkit-transform:rotate(0deg);transform:rotate(0deg);}
+25% {-ms-transform:rotate(30deg);-webkit-transform:rotate(30deg);transform:rotate(30deg);}
+50% {-ms-transform:rotate(0deg);-webkit-transform:rotate(0deg);transform:rotate(0deg);}
+75% {-ms-transform:rotate(-30deg);-webkit-transform:rotate(-30deg);transform:rotate(-30deg);}
+100% {-ms-transform:rotate(0deg);-webkit-transform:rotate(0deg);transform:rotate(0deg);}
+}
+@-webkit-keyframes uptocallmini {
+0% {box-shadow: 0 0 8px 6px rgba(255,48,48, 0), 0 0 0px 0px rgba(0,0,0,0), 0 0 0px 0px rgba(255,48,48, 0);}
+10% {box-shadow: 0 0 8px 6px #AB63C9, 0 0 12px 10px rgba(0,0,0,0), 0 0 12px 14px #AB63C9;}
+100% {box-shadow: 0 0 8px 6px rgba(255,48,48, 0), 0 0 0px 40px rgba(0,0,0,0), 0 0 0px 40px rgba(255,48,48, 0);}
+}
+@-moz-keyframes uptocallmini {
+0% {box-shadow: 0 0 8px 6px rgba(255,48,48, 0), 0 0 0px 0px rgba(0,0,0,0), 0 0 0px 0px rgba(255,48,48, 0);}
+10% {box-shadow: 0 0 8px 6px #AB63C9, 0 0 12px 10px rgba(0,0,0,0), 0 0 12px 14px #AB63C9;}
+100% {box-shadow: 0 0 8px 6px rgba(255,48,48, 0), 0 0 0px 40px rgba(0,0,0,0), 0 0 0px 40px rgba(255,48,48, 0);}
+}
+@keyframes uptocallmini {
+0% {box-shadow: 0 0 8px 6px rgba(255,48,48, 0), 0 0 0px 0px rgba(0,0,0,0), 0 0 0px 0px rgba(255,48,48, 0);}
+10% {box-shadow: 0 0 8px 6px #AB63C9, 0 0 12px 10px rgba(0,0,0,0), 0 0 12px 14px #AB63C9;}
+100% {box-shadow: 0 0 8px 6px rgba(255,48,48, 0), 0 0 0px 40px rgba(0,0,0,0), 0 0 0px 40px rgba(255,48,48, 0);}
 }

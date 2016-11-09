@@ -116,13 +116,16 @@
 			margin: 0 auto;
 			font-family: $fontBold;
 			@include link(#ffffff, #ffffff);
-			font-size: 14px;
+			font-size: 11px;
 			line-height: 36px;
 			text-transform: uppercase;
 			text-decoration: none;
 			text-align: center;
 			height: 35px;
 			border-radius: 4px;
+			@include m4{
+				font-size: 14px;
+			}
 			.popup__callback &{
 				height: 44px;
 			}
@@ -130,6 +133,7 @@
 				background: linear-gradient(to bottom, #8f25bd 0%, #a045c7 100%);
 				cursor: pointer;
 			}
+
 		}
 	}
 	&_file{

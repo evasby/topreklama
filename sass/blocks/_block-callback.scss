@@ -32,14 +32,20 @@
 		text-align: center;
 		font-family: $fontBold;
 		color: #ab63c9;
-		font-size: 24px;
+		font-size: 17px;
 		text-transform: uppercase;
 		margin-bottom: 6px;
+		@include m4{
+			font-size: 24px;
+		}
 		span{
 			position: relative;
 			display: inline-block;
-			height: 17px;
+			height: 9px;
 			padding: 0 12px;
+			@include m4{
+				height: 17px;
+			}
 			&:before{
 				content: '';
 				position: absolute;
@@ -64,9 +70,12 @@
 	}
 	&_title2{
 		font-family: $fontBold;
-		font-size: 24px;
+		font-size: 20px;
 		text-align: center;
 		margin-bottom: 20px;
+		@include m4{
+			font-size: 24px;
+		}
 	}
 	&_descr{
 		border: 1px solid #2d2d2d;

@@ -1,6 +1,6 @@
 .container{
 	&_center{
-		padding: 15px 0 0 30px;
+		padding: 15px 0 0;
 	}
 	@include m7{
 		@include clearfix;
