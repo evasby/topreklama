@@ -3578,11 +3578,14 @@ pre {
       background: #2D2D2D;
       margin: 0 auto;
       overflow: hidden; }
+      .slider .fs_loader {
+        background-color: #1B1B1B;
+        height: 100%; }
       .slider h3 {
         font-family: "fontlight";
         letter-spacing: 13px;
         font-size: 64px;
-        line-height: 64px;
+        line-height: 64px !important;
         color: #fff;
         text-transform: uppercase; }
       .slider p {
@@ -3594,7 +3597,7 @@ pre {
       .slider div {
         font-family: "fontbold";
         font-size: 12px;
-        line-height: 20px;
+        line-height: 20px !important;
         color: #fff;
         text-transform: uppercase; }
       .slider_content {
@@ -3637,6 +3640,8 @@ pre {
   .slider-buttons_popup1 {
     font-size: 14px;
     display: inline-block;
+    height: 52px !important;
+    line-height: 52px !important;
     border: 1px solid #0d1117;
     border-radius: 5px;
     -webkit-box-shadow: inset 0px 1px 0px 0px #bb7bd7;
@@ -3667,6 +3672,8 @@ pre {
   .slider-buttons_popup2 {
     font-size: 14px;
     display: inline-block;
+    height: 52px !important;
+    line-height: 52px !important;
     border: 1px solid #0d1117;
     border-radius: 5px;
     -webkit-box-shadow: inset 0px 1px 0px 0px #707070;
